@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react'
-const logo = '/images/logo.svg';
-const search = '/images/search.svg';
-const user = '/images/user.svg';
-const basket = '/images/basket.svg';
+const logo = '/images/logo.png';
+const search = '/images/search.png';
+const user = '/images/user.png';
+const basket = '/images/basket.png';
 
 const Header = () => {
   return (

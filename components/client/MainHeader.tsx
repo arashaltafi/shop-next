@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from './Header'
 import Image from 'next/image'
-const bg1 = '/images/bg-1.svg';
-const bg2 = '/images/bg-2.svg';
+const bg1 = '/images/bg-1.png';
+const bg2 = '/images/bg-2.png';
 
 const MainHeader = () => {
     return (
