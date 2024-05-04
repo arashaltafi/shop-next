@@ -90,11 +90,11 @@
   }
 
   .shake2 {
-    animation: shake2 2s ease-in-out infinite alternate;
+    animation: shake2 5s ease-in-out infinite alternate;
   }
 
   .shake3 {
-    animation: shake3 1s ease-in-out infinite alternate;
+    animation: shake3 10s ease-in-out infinite alternate;
   }
 
   @keyframes translateAndBack {
@@ -215,5 +215,13 @@
     100% {
       transform: translate(1px, -2px) rotate(-1deg);
     }
+  }
+
+  .shadow-title {
+    color: #fdf8f6;
+    background: #221518;
+    text-shadow: 1px 0px 1px #4E342E, 0px 1px 1px #f2e8e5, 2px 1px 1px #4E342E, 1px 0px 1px #f2e8e5, 4px 2px 1px #4E342E, 2px 3px 1px #f2e8e5, 1px 0px 1px #4E342E, 3px 2px 1px #f2e8e5, 0px 0px 1px #4E342E, 1px 2px 1px #f2e8e5, 1px 0px 1px #f2e8e5, 2px 2px 1px #4E342E;
+    color: #fdf8f6;
+    background: #221518;
   }
 }

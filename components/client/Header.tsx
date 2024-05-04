@@ -14,9 +14,9 @@ const Header = () => {
             className='size-8 cursor-pointer'
             src={search}
             alt="search"
-            width={20}
-            height={20}
-            quality={10}
+            width={100}
+            height={100}
+            quality={100}
             priority
             loading='eager'
           />
@@ -26,9 +26,9 @@ const Header = () => {
             className='size-8 cursor-pointer'
             src={basket}
             alt="search"
-            width={20}
-            height={20}
-            quality={10}
+            width={100}
+            height={100}
+            quality={100}
             priority
             loading='eager'
           />
@@ -38,9 +38,9 @@ const Header = () => {
             className='size-8 cursor-pointer'
             src={user}
             alt="search"
-            width={20}
-            height={20}
-            quality={10}
+            width={100}
+            height={100}
+            quality={100}
             priority
             loading='eager'
           />
@@ -71,7 +71,7 @@ const Header = () => {
         alt="logo"
         width={100}
         height={100}
-        quality={10}
+        quality={100}
         priority
         loading='eager'
       />
