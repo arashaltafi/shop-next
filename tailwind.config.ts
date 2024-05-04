@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,6 +14,10 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      dropShadow: {
+        '3xl': '0 35px 35px rgba(100, 116, 139.25)',
+        '4xl': '0 50px 50px rgba(100, 116, 139.25)',
+      }
     },
   },
   plugins: [],
