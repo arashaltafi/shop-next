@@ -8,7 +8,39 @@
   }
 
   body {
-    @apply font-normal bg-[#221518] text-white;
+    @apply font-normal bg-[#221518] text-white overflow-x-hidden;
+  }
+
+  li {
+    @apply list-none;
+  }
+
+  /* WebKit (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #221518;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4E342E;
+    border-radius: 2px;
+  }
+
+  /* Firefox */
+  ::-moz-scrollbar {
+    width: 10px;
+  }
+
+  ::-moz-scrollbar-track {
+    background: #221518;
+  }
+
+  ::-moz-scrollbar-thumb {
+    background: #4E342E;
+    border-radius: 2px;
   }
 }
 

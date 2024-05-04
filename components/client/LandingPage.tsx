@@ -1,8 +1,11 @@
 import React from 'react'
+import MainHeader from './MainHeader'
 
 const LandingPage = () => {
   return (
-    <div>LandingPage</div>
+    <div className='flex flex-col items-center justify-start w-full min-h-screen'>
+      <MainHeader />
+    </div>
   )
 }
 
