@@ -17,6 +17,8 @@
 
   /* WebKit (Chrome, Safari) */
   ::-webkit-scrollbar {
+    /* set hidden scrollbar */
+    display: none; 
     width: 10px;
   }
 
@@ -95,6 +97,14 @@
 
   .shake3 {
     animation: shake3 10s ease-in-out infinite alternate;
+  }
+
+  .blink {
+    animation: blink 1s ease-in-out infinite alternate;
+  }
+
+  .customBorderBottom {
+    border-radius: 25% 25% 50% 50% / 0% 0% 10% 10%;
   }
 
   @keyframes translateAndBack {
@@ -217,11 +227,55 @@
     }
   }
 
+  @keyframes blink {
+    0% {
+      opacity: 0.5;
+    }
+
+    10% {
+      opacity: 0.55;
+    }
+
+    20% {
+      opacity: 0.6;
+    }
+
+    30% {
+      opacity: 0.65;
+    }
+
+    40% {
+      opacity: 0.7;
+    }
+
+    50% {
+      opacity: 0.75;
+    }
+
+    60% {
+      opacity: 0.8;
+    }
+
+    70% {
+      opacity: 0.85;
+    }
+
+    80% {
+      opacity: 0.9;
+    }
+
+    90% {
+      opacity: 0.95;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
   .shadow-title {
     color: #fdf8f6;
-    background: #221518;
     text-shadow: 1px 0px 1px #4E342E, 0px 1px 1px #f2e8e5, 2px 1px 1px #4E342E, 1px 0px 1px #f2e8e5, 4px 2px 1px #4E342E, 2px 3px 1px #f2e8e5, 1px 0px 1px #4E342E, 3px 2px 1px #f2e8e5, 0px 0px 1px #4E342E, 1px 2px 1px #f2e8e5, 1px 0px 1px #f2e8e5, 2px 2px 1px #4E342E;
     color: #fdf8f6;
-    background: #221518;
   }
 }
