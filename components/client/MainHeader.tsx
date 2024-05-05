@@ -19,7 +19,7 @@ const MainHeader = () => {
                     quality={100}
                     loading='lazy'
                 />
-                <h2 className='shadow-title text-4xl blink'>
+                <h2 className='shadow-title text-4xl blink fontMorvarid'>
                     خرید آنلاین انواع قهوه
                 </h2>
                 <p className='text-center text-brown-300'>

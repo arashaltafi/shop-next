@@ -18,7 +18,7 @@
   /* WebKit (Chrome, Safari) */
   ::-webkit-scrollbar {
     /* set hidden scrollbar */
-    display: none; 
+    display: none;
     width: 10px;
   }
 
@@ -44,9 +44,19 @@
     background: #4E342E;
     border-radius: 2px;
   }
+
+  @font-face {
+    font-family: "morvarid";
+    src: url('/fonts/Far_Morvarid.ttf');
+  }
 }
 
 @layer components {
+  .fontMorvarid {
+    font-family: "morvarid", "vazir-normal", "vazir-medium", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+    ;
+  }
+
   .btn {
     @apply rounded-lg hover:rounded-md px-4 py-2 text-lg font-medium;
   }
@@ -276,6 +286,10 @@
   .shadow-title {
     color: #fdf8f6;
     text-shadow: 1px 0px 1px #4E342E, 0px 1px 1px #f2e8e5, 2px 1px 1px #4E342E, 1px 0px 1px #f2e8e5, 4px 2px 1px #4E342E, 2px 3px 1px #f2e8e5, 1px 0px 1px #4E342E, 3px 2px 1px #f2e8e5, 0px 0px 1px #4E342E, 1px 2px 1px #f2e8e5, 1px 0px 1px #f2e8e5, 2px 2px 1px #4E342E;
-    color: #fdf8f6;
+  }
+
+  .shadow-title-banner {
+    color: #EFEBE9;
+    text-shadow: 1px 0px 1px #A1887F, 0px 1px 1px #f2e8e5, 0px 1px 1px #A1887F, 1px 0px 1px #f2e8e5, 4px 2px 1px #A1887F, 1px 0px 1px #f2e8e5, 1px 0px 1px #A1887F, 3px 2px 1px #f2e8e5, 0px 0px 1px #A1887F;
   }
 }
