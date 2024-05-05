@@ -7,7 +7,7 @@ const basket = '/images/basket.png';
 
 const Header = () => {
   return (
-    <header className='fixed top-4 left-8 right-8 z-50 flex flex-row items-center justify-center gap-12 select-none backdrop-filter backdrop-blur-[5px]'>
+    <header className='fixed top-4 left-8 right-8 z-50 flex flex-row items-center justify-center gap-12 select-none backdrop-filter py-[1px] px-4 bg-brown-900/50 rounded-3xl backdrop-blur-[5px]'>
       <nav className='flex flex-row gap-6 items-center justify-center'>
         <li>
           <Image

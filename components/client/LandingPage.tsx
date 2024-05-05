@@ -3,6 +3,8 @@ import MainHeader from './MainHeader'
 import Banner1 from './Banner1'
 import CoffeeBeans from './CoffeeBeans'
 import Categories from './Categories'
+import Banner2 from './Banner2'
+import BestSellers from './BestSellers'
 
 const LandingPage = () => {
   return (
@@ -11,6 +13,8 @@ const LandingPage = () => {
       <MainHeader />
       <Banner1 />
       <Categories />
+      <BestSellers />
+      <Banner2 />
       <div>
         <p>1</p>
         <p>1</p>
