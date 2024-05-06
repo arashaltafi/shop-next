@@ -10,7 +10,7 @@ const CoffeeBeans = () => {
     return (
         <>
             <Image
-                className='size-8 absolute left-0 top-[60%]'
+                className='size-8 absolute left-0 top-[100%]'
                 width={10}
                 height={10}
                 src={bean1}
@@ -19,7 +19,7 @@ const CoffeeBeans = () => {
                 loading='lazy'
             />
             <Image
-                className='size-8 absolute left-0 top-[70%]'
+                className='size-8 absolute right-0 top-[200%]'
                 width={10}
                 height={10}
                 src={bean2}
@@ -28,7 +28,7 @@ const CoffeeBeans = () => {
                 loading='lazy'
             />
             <Image
-                className='size-8 absolute left-0 top-[80%]'
+                className='size-8 absolute left-0 top-[300%]'
                 width={10}
                 height={10}
                 src={bean3}
@@ -37,7 +37,7 @@ const CoffeeBeans = () => {
                 loading='lazy'
             />
             <Image
-                className='size-8 absolute left-0 top-[90%]'
+                className='size-8 absolute right-0 top-[400%]'
                 width={10}
                 height={10}
                 src={bean4}
@@ -46,7 +46,7 @@ const CoffeeBeans = () => {
                 loading='lazy'
             />
             <Image
-                className='size-8 absolute left-0 top-[100%]'
+                className='size-8 absolute left-0 top-[500%]'
                 width={10}
                 height={10}
                 src={bean5}

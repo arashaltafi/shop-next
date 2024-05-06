@@ -5,6 +5,7 @@ import CoffeeBeans from './CoffeeBeans'
 import Categories from './Categories'
 import Banner2 from './Banner2'
 import BestSellers from './BestSellers'
+import Lastest from './Lastest'
 
 const LandingPage = () => {
   return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
       <Categories />
       <BestSellers />
       <Banner2 />
+      <Lastest />
       <div>
         <p>1</p>
         <p>1</p>

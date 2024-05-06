@@ -46,6 +46,16 @@ const MainHeader = () => {
                     loading='lazy'
                 />
             </div>
+
+            <Image
+                className='-z-10 w-full absolute top-0 bottom-0'
+                src={'/images/bg-4.png'}
+                width={500}
+                height={500}
+                alt="background3"
+                quality={100}
+                loading='lazy'
+            />
         </div>
     )
 }

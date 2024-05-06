@@ -8,7 +8,7 @@ const typesCoffee = '/images/category5.png';
 
 const Categories = () => {
     return (
-        <div className='select-none mt-20 w-full flex flex-col items-center justify-center gap-12 px-16'>
+        <div className='relative select-none mt-20 w-full flex flex-col items-center justify-center gap-12 px-16'>
             <h2 dir='rtl' className='self-end text-brown-200 text-5xl fontMorvarid'>
                 دسته بندی محصولات:
             </h2>
@@ -88,6 +88,15 @@ const Categories = () => {
                     </h6>
                 </div>
             </div>
+            <Image
+                className='-z-10 w-full absolute top-0 bottom-0'
+                src={'/images/bg-4.png'}
+                width={500}
+                height={500}
+                alt="background3"
+                quality={100}
+                loading='lazy'
+            />
         </div>
     )
 }
