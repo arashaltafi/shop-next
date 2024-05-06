@@ -114,15 +114,20 @@ const BestSellers = () => {
                         <div
                             key={product.id}
                             className='relative bg-brown-900/5 group cursor-pointer flex flex-col items-center justify-center gap-4 rounded-xl p-[1px] border-2 border-solid border-brown-700 text-brown-200 hover:text-brown-100 hover:bg-brown-900 transition-all duration-200'>
-                            <Image
-                                className='w-72 h-64 group-hover:brightness-110 transition-all bg-brown-500 rounded-t-xl rounded-b-sm'
-                                src={product.image}
-                                alt={product.name}
-                                width={200}
-                                height={200}
-                                quality={100}
-                                loading='lazy'
-                            />
+                            <div className='relative'>
+                                <Image
+                                    className='w-72 h-64 group-hover:brightness-110 transition-all bg-brown-500 rounded-t-xl rounded-b-sm'
+                                    src={product.image}
+                                    alt={product.name}
+                                    width={200}
+                                    height={200}
+                                    quality={100}
+                                    loading='lazy'
+                                />
+                                <span
+                                    className='absolute top-0 right-0 left-0 bottom-0 bg-gradient-to-bl from-[50%] via-[50%] to-[100%] from-transparent via-transparent to-brown-800 rounded-t-xl rounded-b-sm'
+                                />
+                            </div>
 
                             <div className='flex flex-col items-center justify-center gap-2 font-light pb-8'>
                                 <h3 dir='rtl' className='font-bold text-xl text-ellipsis line-clamp-2 max-w-64 text-center'>
