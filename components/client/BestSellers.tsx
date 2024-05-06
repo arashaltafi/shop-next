@@ -106,7 +106,7 @@ const BestSellers = () => {
                     products.map(product => (
                         <div
                             key={product.id}
-                            className='relative group cursor-pointer flex flex-col items-center justify-center gap-4 rounded-xl p-[1px] border-2 border-solid border-brown-700 text-brown-200 hover:text-brown-100 transition-all duration-200'>
+                            className='relative bg-brown-900/5 group cursor-pointer flex flex-col items-center justify-center gap-4 rounded-xl p-[1px] border-2 border-solid border-brown-700 text-brown-200 hover:text-brown-100 hover:bg-brown-900 transition-all duration-200'>
                             <Image
                                 className='w-72 h-64 group-hover:brightness-110 transition-all bg-brown-500 rounded-t-xl rounded-b-sm'
                                 src={product.image}
