@@ -3,7 +3,7 @@ import React from 'react'
 
 const Services = () => {
     return (
-        <div className='mt-20 grid grid-cols-2 items-center justify-center gap-y-20 gap-x-16'>
+        <div className='select-none mt-20 grid grid-cols-2 items-center justify-center gap-y-20 gap-x-16'>
             <div className='flex flex-row items-center justify-center gap-4'>
                 <div className='w-full flex flex-col items-center justify-center gap-3'>
                     <h2 className='w-full text-2xl text-end'>

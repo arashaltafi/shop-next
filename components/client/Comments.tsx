@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCards, EffectCoverflow, Pagination, Navigation, EffectCube } from 'swiper/modules';
+import { EffectCards, Navigation, EffectCube } from 'swiper/modules';
 import Rating from '@mui/material/Rating';
 import Image from 'next/image';
 
@@ -71,6 +71,10 @@ const Comments = () => {
         modules={[Navigation, EffectCards, EffectCube]}
         centeredSlides={true}
         centeredSlidesBounds={true}
+        navigation={{
+          nextEl: '.swiper-button-next1',
+          prevEl: '.swiper-button-prev1',
+        }}
         pagination={{ clickable: true }}
         onClick={(_, e) => handleClickProduct(e)}
       >
@@ -121,6 +125,28 @@ const Comments = () => {
           })
         }
       </Swiper>
+      <div className='flex flex-row items-center justify-center gap-8'>
+        <Image
+          className='size-12 swiper-button-prev1 cursor-pointer transition-all hover:scale-105 active:scale-95'
+          src={'/images/arrow-left-circle.svg'}
+          alt='arrow left'
+          width={50}
+          height={50}
+          quality={100}
+          priority
+          loading='eager'
+        />
+        <Image
+          className='size-12 swiper-button-next1 cursor-pointer transition-all hover:scale-105 active:scale-95'
+          src={'/images/arrow-right-circle.svg'}
+          alt='arrow right'
+          width={50}
+          height={50}
+          quality={100}
+          priority
+          loading='eager'
+        />
+      </div>
     </div>
   )
 }
