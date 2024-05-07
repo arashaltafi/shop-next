@@ -8,6 +8,7 @@ import BestSellers from './BestSellers'
 import Lastest from './Lastest'
 import Comments from './Comments'
 import Services from './Services'
+import Menu from './Menu'
 
 const LandingPage = () => {
   return (
@@ -20,6 +21,7 @@ const LandingPage = () => {
       <Banner2 />
       <Lastest />
       <Comments />
+      <Menu />
       <Services />
       <div>
         <p>1</p>
