@@ -141,11 +141,11 @@ const BestSellers = () => {
                                 </h5>
                             </div>
 
-                            <div id={`order-${product.id}`} className='z-50 text-md absolute -bottom-8 px-5 py-3 bg-brown-600 text-brown-200 rounded-xl hover:bg-green-500 hover:scale-[101%] active:scale-[99%]'>
+                            <div id={`order-${product.id}`} className='z-40 text-md absolute -bottom-8 px-5 py-3 bg-brown-600 text-brown-200 rounded-xl hover:bg-green-500 hover:scale-[101%] active:scale-[99%]'>
                                 سفارش
                             </div>
 
-                            <span id={`product-${product.id}`} className='z-40 absolute inset-0' />
+                            <span id={`product-${product.id}`} className='z-30 absolute inset-0' />
                         </div>
                     ))
                 }

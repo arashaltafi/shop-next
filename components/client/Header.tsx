@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react'
 const logo = '/images/logo.png';
-const search = '/images/search.png';
-const user = '/images/user.png';
-const basket = '/images/basket.png';
+const search = '/images/search.svg';
+const user = '/images/user.svg';
+const basket = '/images/basket.svg';
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
       <nav className='flex flex-row gap-6 items-center justify-center'>
         <li>
           <Image
-            className='size-8 cursor-pointer'
+            className='size-8 cursor-pointer hover:scale-105 active:scale-95'
             src={search}
             alt="search"
             width={100}
@@ -23,7 +23,7 @@ const Header = () => {
         </li>
         <li>
           <Image
-            className='size-8 cursor-pointer'
+            className='size-8 cursor-pointer hover:scale-105 active:scale-95'
             src={basket}
             alt="search"
             width={100}
@@ -35,7 +35,7 @@ const Header = () => {
         </li>
         <li>
           <Image
-            className='size-8 cursor-pointer'
+            className='size-8 cursor-pointer hover:scale-105 active:scale-95'
             src={user}
             alt="search"
             width={100}
@@ -48,19 +48,19 @@ const Header = () => {
       </nav>
 
       <ul className='flex gap-8 flex-row-reverse flex-1 *:text-2xl *:transition-all'>
-        <li className='cursor-pointer hover:text-brown-300'>
+        <li className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
           فروشگاه
         </li>
-        <li className='cursor-pointer hover:text-brown-300'>
+        <li className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
           پشتیبانی
         </li>
-        <li className='cursor-pointer hover:text-brown-300'>
+        <li className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
           ارتباط با ما
         </li>
-        <li className='cursor-pointer hover:text-brown-300'>
+        <li className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
           درباره ما
         </li>
-        <li className='cursor-pointer hover:text-brown-300'>
+        <li className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
           بلاگ
         </li>
       </ul>
