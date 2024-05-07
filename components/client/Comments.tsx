@@ -68,7 +68,7 @@ const Comments = () => {
         spaceBetween={30}
         slidesPerView={3}
         loop={true}
-        modules={[Navigation]}
+        modules={[Navigation, EffectCards, EffectCube]}
         centeredSlides={true}
         centeredSlidesBounds={true}
         pagination={{ clickable: true }}
@@ -110,7 +110,10 @@ const Comments = () => {
                     src={'/images/svg-wave-1.svg'}
                     width={100}
                     height={100}
+                    quality={100}
                     alt='background wave'
+                    priority
+                    loading='eager'
                   />
                 </div>
               </SwiperSlide>

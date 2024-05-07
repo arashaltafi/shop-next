@@ -7,6 +7,7 @@ import Banner2 from './Banner2'
 import BestSellers from './BestSellers'
 import Lastest from './Lastest'
 import Comments from './Comments'
+import Services from './Services'
 
 const LandingPage = () => {
   return (
@@ -19,6 +20,7 @@ const LandingPage = () => {
       <Banner2 />
       <Lastest />
       <Comments />
+      <Services />
       <div>
         <p>1</p>
         <p>1</p>
