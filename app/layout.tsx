@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import localFont from 'next/font/local'
 import Script from "next/script";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
 const vazirFont = localFont({
   src: [
@@ -83,7 +84,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       {/* <Script src='/scripts/script.js' /> */}
       <body className={vazirFont.className}>
-        {children}
+        <AppRouterCacheProvider>
+          {children}
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
