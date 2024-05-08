@@ -8,7 +8,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Navigation, EffectCube } from 'swiper/modules';
 import Rating from '@mui/material/Rating';
 import Image from 'next/image';
-import { url } from 'inspector';
 const wave1 = 'images/svg-wave-1.svg';
 
 const Comments = () => {
