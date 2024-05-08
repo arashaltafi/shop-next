@@ -8,6 +8,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Navigation, EffectCube } from 'swiper/modules';
 import Rating from '@mui/material/Rating';
 import Image from 'next/image';
+import { url } from 'inspector';
+const wave1 = 'images/svg-wave-1.svg';
 
 const Comments = () => {
   const [comments, setComments] = useState<{
@@ -58,8 +60,20 @@ const Comments = () => {
   }
 
   return (
-    <div className='select-none mt-20 w-full flex flex-col items-center justify-center gap-16 px-16'>
-      <h2 dir='rtl' className='w-full text-start text-brown-200 text-5xl fontMorvarid'>
+    <div className='relative select-none mt-20 w-full flex flex-col items-center justify-center gap-16 px-16'>
+
+      <div
+        className='absolute w-full h-full -z-10'
+        style={{
+          background: "url('/images/bg-5.png')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "#3E2723",
+          filter: 'blur(2px)'
+        }}>
+
+      </div>
+      <h2 dir='rtl' className='w-full text-start text-brown-200 text-5xl mt-8 fontMorvarid'>
         نظریات مشتریان:
       </h2>
 
@@ -84,7 +98,7 @@ const Comments = () => {
               <SwiperSlide key={comment.id} className="size-[200px] rounded-lg overflow-hidden">
                 <div
                   key={comment.id}
-                  className='relative bg-brown-900 cursor-pointer group text-start flex flex-col items-center justify-center gap-8 rounded-xl px-8 py-5 border-2 border-solid border-brown-700 text-brown-200 hover:text-brown-100 hover:bg-brown-900/20 transition-all duration-200'
+                  className='relative bg-[#291a1e] cursor-pointer group text-start flex flex-col items-center justify-center gap-8 rounded-xl px-8 py-5 border-2 border-solid border-brown-700 text-brown-200 hover:text-brown-100 hover:bg-brown-900 transition-all duration-200'
                 >
                   <h3 dir='rtl' className='w-full text-3xl line-clamp-1 text-ellipsis fontMorvarid'>
                     {comment.name}
@@ -111,7 +125,7 @@ const Comments = () => {
                   <span id={`comment-${comment.id}`} className='z-40 absolute inset-0' />
                   <Image
                     className='absolute bottom-0 w-full opacity-50'
-                    src={'/images/svg-wave-1.svg'}
+                    src={wave1}
                     width={100}
                     height={100}
                     quality={100}
@@ -125,7 +139,8 @@ const Comments = () => {
           })
         }
       </Swiper>
-      <div className='flex flex-row items-center justify-center gap-8'>
+
+      <div className='flex flex-row items-center justify-center gap-8 mb-2'>
         <Image
           className='size-12 swiper-button-prev1 cursor-pointer transition-all hover:scale-105 active:scale-95'
           src={'/images/arrow-left-circle.svg'}
