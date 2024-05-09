@@ -66,7 +66,7 @@ const Header = () => {
       </ul>
 
       <Image
-        className='size-[88px] cursor-pointer'
+        className='size-[88px] cursor-pointer hover:brightness-125 transition-all duration-150'
         src={logo}
         alt="logo"
         width={100}
