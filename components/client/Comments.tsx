@@ -12,12 +12,12 @@ import { getDeviceSize } from '@/utils/GlobalUtils';
 const wave1 = 'images/svg-wave-1.svg';
 
 const Comments = () => {
-  const [comments, setComments] = useState<{
+  const [comment, setComment] = useState<{
     id: number, name: string, description: string, star: number
   }[]>([])
 
   useEffect(() => {
-    setComments([
+    setComment([
       {
         id: 1,
         name: 'لورم 1',
@@ -93,19 +93,19 @@ const Comments = () => {
         onClick={(_, e) => handleClickProduct(e)}
       >
         {
-          comments.map((comment) => {
+          comment.map((item) => {
             return (
-              <SwiperSlide key={comment.id} className="size-[200px] rounded-lg overflow-hidden">
+              <SwiperSlide key={item.id} className="size-[200px] rounded-lg overflow-hidden">
                 <div
-                  key={comment.id}
+                  key={item.id}
                   className='relative bg-[#291a1e] cursor-pointer group text-start flex flex-col items-center justify-center gap-8 rounded-xl px-8 py-5 border-2 border-solid border-brown-700 text-brown-200 hover:text-brown-100 hover:bg-brown-900 transition-all duration-200'
                 >
-                  <h3 dir='rtl' className='w-full text-3xl line-clamp-1 text-ellipsis fontMorvarid'>
-                    {comment.name}
+                  <h3 dir='rtl' className='w-full text-xl lg:text-2xl xl:text-3xl line-clamp-1 text-ellipsis fontMorvarid'>
+                    {item.name}
                   </h3>
 
                   <Rating
-                    value={comment.star}
+                    value={item.star}
                     readOnly={true}
                     precision={0.5}
                     size='large'
@@ -119,10 +119,10 @@ const Comments = () => {
                     }}
                   />
 
-                  <p dir='rtl' className='w-full text-lg min-h-36 line-clamp-5 text-ellipsis text-justify font-light'>
-                    {comment.description}
+                  <p dir='rtl' className='w-full text-sm lg:text-md xl:text-lg min-h-36 line-clamp-5 text-ellipsis text-justify font-light'>
+                    {item.description}
                   </p>
-                  <span id={`comment-${comment.id}`} className='z-40 absolute inset-0' />
+                  <span id={`comment-${item.id}`} className='z-40 absolute inset-0' />
                   <Image
                     className='absolute bottom-0 w-full opacity-50'
                     src={wave1}
@@ -140,9 +140,9 @@ const Comments = () => {
         }
       </Swiper>
 
-      <div className='flex flex-row items-center justify-center gap-8 mb-2'>
+      <div className='flex flex-row items-center justify-center gap-5 md:gap-6 lg:gap-7 xl:gap-8 mb-2'>
         <Image
-          className='size-12 swiper-button-prev1 cursor-pointer transition-all hover:scale-105 active:scale-95'
+          className='size-10 md:size-11 lg:size-12 swiper-button-prev1 cursor-pointer transition-all hover:scale-105 active:scale-95'
           src={'/images/arrow-left-circle.svg'}
           alt='arrow left'
           width={50}
@@ -152,7 +152,7 @@ const Comments = () => {
           loading='eager'
         />
         <Image
-          className='size-12 swiper-button-next1 cursor-pointer transition-all hover:scale-105 active:scale-95'
+          className='size-10 md:size-11 lg:size-12 swiper-button-next1 cursor-pointer transition-all hover:scale-105 active:scale-95'
           src={'/images/arrow-right-circle.svg'}
           alt='arrow right'
           width={50}
