@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Navigation, EffectCube } from 'swiper/modules';
 import Rating from '@mui/material/Rating';
 import Image from 'next/image';
+import { getDeviceSize } from '@/utils/GlobalUtils';
 const wave1 = 'images/svg-wave-1.svg';
 
 const Comments = () => {
@@ -78,8 +79,8 @@ const Comments = () => {
 
       <Swiper
         className="w-full flex flex-row flex-nowrap items-center justify-center gap-16"
-        spaceBetween={30}
-        slidesPerView={3}
+        spaceBetween={getDeviceSize() === 'xm' ? 5 : getDeviceSize() === 'sm' ? 10 : getDeviceSize() === 'md' ? 15 : getDeviceSize() === 'lg' ? 20 : getDeviceSize() === 'xl' ? 25 : 30}
+        slidesPerView={getDeviceSize() === 'xm' ? 1 : getDeviceSize() === 'sm' ? 1 : getDeviceSize() === 'md' ? 2 : getDeviceSize() === 'lg' ? 2.5 : getDeviceSize() === 'xl' ? 3 : 3}
         loop={true}
         modules={[Navigation, EffectCards, EffectCube]}
         centeredSlides={true}
