@@ -7,7 +7,7 @@ const bg3 = '/images/bg-3.png';
 
 const MainHeader = () => {
     return (
-        <div className='relative w-full h-[90vh] flex flex-row justify-between bg-gradient-to-bl from-[1%] to-[99%] from-[#7C573C] to-transparent customBorderBottom overflow-hidden'>
+        <div className='relative w-full h-[70vh] lg:h-[80vh] xl:h-[90vh] flex flex-row justify-between bg-gradient-to-bl from-[1%] to-[99%] from-[#7C573C] to-transparent customBorderBottom overflow-hidden'>
             <Header />
             <div className='flex flex-col items-center justify-center ps-8 gap-12'>
                 <Image
@@ -19,16 +19,16 @@ const MainHeader = () => {
                     quality={100}
                     loading='lazy'
                 />
-                <h2 className='shadow-title text-4xl blink fontMorvarid'>
+                <h2 className='shadow-title text-center text-2xl lg:text-3xl xl:text-4xl blink fontMorvarid'>
                     خرید آنلاین انواع قهوه
                 </h2>
-                <p className='text-center text-brown-300'>
+                <p className='text-center text-brown-300 text-md lg:text-lg xl:text-xl'>
                     فروشگاه اینترنتی قهوه، خرید انواع پودر و دان قهوه با قیمت مناسب
                 </p>
             </div>
             <div className='relative w-full'>
                 <Image
-                    className='w-full h-full pt-8 z-20'
+                    className='w-full h-full pt-16 lg:pt-12 xl:pt-8 z-20'
                     width={500}
                     height={500}
                     src={bg1}
