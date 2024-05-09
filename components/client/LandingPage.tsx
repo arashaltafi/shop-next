@@ -9,6 +9,7 @@ import Lastest from './Lastest'
 import Comments from './Comments'
 import Services from './Services'
 import Menu from './Menu'
+import Footer from './Footer'
 
 const LandingPage = () => {
   return (
@@ -23,15 +24,7 @@ const LandingPage = () => {
       <Comments />
       <Menu />
       <Services />
-      <div>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-      </div>
+      <Footer />
     </div>
   )
 }

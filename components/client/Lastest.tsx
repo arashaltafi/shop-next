@@ -3,7 +3,7 @@
 import { convertPrice } from '@/utils/Product';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
-import { FaAngleLeft } from "react-icons/fa";
+import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 const product1 = '/images/p1.png';
 const product2 = '/images/p2.png';
 const product3 = '/images/p3.png';
@@ -98,7 +98,7 @@ const Lastest = () => {
                     className='flex flex-row items-center justify-center gap-2 text-lg transition-all duration-200 cursor-pointer text-brown-200 hover:text-white hover:bg-brown-600 hover:scale-105 active:scale-95 rounded-xl px-4 py-2'
                     onClick={handleClickMore}
                 >
-                    <FaAngleLeft />
+                    <KeyboardArrowLeftRoundedIcon />
                     <h6>مشاهده همه</h6>
                 </div>
                 <h2 dir='rtl' className='self-end text-brown-200 text-5xl fontMorvarid'>
