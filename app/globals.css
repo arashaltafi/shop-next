@@ -54,7 +54,10 @@
 @layer components {
   .fontMorvarid {
     font-family: "morvarid", "vazir-normal", "vazir-medium", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
-    ;
+  }
+
+  .fontVazir {
+    font-family: "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
   }
 
   .btn {
