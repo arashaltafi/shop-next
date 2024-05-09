@@ -107,7 +107,7 @@ const BestSellers = () => {
                 </h2>
             </div>
             <div
-                className='flex flex-row flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16'
+                className='flex flex-row flex-wrap items-center justify-center gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16'
                 onClick={(e) => handleClickProduct(e)}
             >
                 {
