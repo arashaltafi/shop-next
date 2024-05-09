@@ -43,7 +43,7 @@ const Banner2 = () => {
                         return (
                             <SwiperSlide key={banner.id}>
                                 <div className='relative flex flex-row gap-8 items-center justify-between mx-auto w-[95%] lg:w-[90%] xl:w-[80%] xl:min-h-96 px-8 md:px-12 lg:px-14 xl:px-16 py-2 sm:py-4 md:py-6 lg:py-7 xl:py-8 bg-[#54372B] rounded-2xl border border-solid border-brown-500'>
-                                    <h2 dir='rtl' className='w-full font-light text-sm md:text-md lg:text-lg xl:text-xl leading-8 text-brown-200 line-clamp-5 text-ellipsis text-justify'>
+                                    <h2 dir='rtl' className='w-full font-light text-sm md:text-md lg:text-lg xl:text-xl leading-8 text-brown-200 line-clamp-5 text-ellipsis md:text-justify'>
                                         {banner.description}
                                     </h2>
 

@@ -55,7 +55,7 @@ const Banner1 = () => {
                                         loading='lazy'
                                     />
 
-                                    <h2 dir='rtl' className='w-full font-light text-sm md:text-md lg:text-lg xl:text-xl leading-8 text-brown-200 line-clamp-5 text-ellipsis text-justify'>
+                                    <h2 dir='rtl' className='w-full font-light text-sm md:text-md lg:text-lg xl:text-xl leading-8 text-brown-200 line-clamp-5 text-ellipsis md:text-justify'>
                                         {banner.description}
                                     </h2>
 
