@@ -8,8 +8,8 @@ const typesCoffee = '/images/category5.png';
 
 const Categories = () => {
     return (
-        <div className='relative select-none mt-20 w-full flex flex-col items-center justify-center gap-12 px-16'>
-            <h2 dir='rtl' className='self-end text-brown-200 text-5xl fontMorvarid'>
+        <div className='relative select-none md:mt-12 lg:mt-16 xl:mt-20 w-full flex flex-col items-center justify-center gap-x-6 md:gap-x-8 lg:gap-x-10 xl:gap-x-12 gap-y-12 px-2 sm:px-5 md:px-8 lg:px-14 xl:px-16'>
+            <h2 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>
                 دسته بندی محصولات:
             </h2>
             <div className='flex flex-row flex-wrap items-center justify-center gap-12'>

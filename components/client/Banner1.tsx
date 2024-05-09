@@ -30,7 +30,7 @@ const Banner1 = () => {
     }, [])
 
     return (
-        <div className='select-none w-full flex flex-col gap-2 md:gap-4 lg:gap-6 xl:gap-8 items-center justify-center'>
+        <div className='select-none w-full flex flex-col gap-0 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 items-center justify-center'>
             <Swiper
                 className="w-full flex flex-row flex-nowrap items-center justify-center"
                 style={{

@@ -92,7 +92,7 @@ const Lastest = () => {
     }
 
     return (
-        <div className='select-none mt-20 w-full flex flex-col items-center justify-center gap-6 md:gap-8 lg:gap-10 xl:gap-12 px-2 sm:px-5 md:px-8 lg:px-14 xl:px-16'>
+        <div className='select-none md:mt-12 lg:mt-16 xl:mt-20 w-full flex flex-col items-center justify-center gap-6 md:gap-8 lg:gap-10 xl:gap-12 px-2 sm:px-5 md:px-8 lg:px-14 xl:px-16'>
             <div className='flex flex-row items-center justify-between w-full'>
                 <div
                     className='flex flex-row items-center justify-center gap-2 text-sm md:text-md xl:text-lg transition-all duration-200 cursor-pointer text-brown-200 hover:text-white hover:bg-brown-600 hover:scale-105 active:scale-95 rounded-xl px-4'
