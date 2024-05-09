@@ -39,24 +39,24 @@ const Services = () => {
     }, [])
 
     return (
-        <div className='select-none mt-20 grid grid-cols-2 items-center justify-center gap-y-20 gap-x-16'>
+        <div className='select-none md:mt-12 lg:mt-16 xl:mt-20 grid grid-cols-1 sm:grid-cols-2 items-center justify-center gap-x-6 md:gap-x-8 lg:gap-x-10 xl:gap-x-12 gap-y-10 md:gap-y-12 lg:gap-y-16 xl:gap-y-20 px-2 sm:px-5 md:px-8 lg:px-14 xl:px-16'>
             {
                 service.map((item) => (
                     <div
                         key={item.id}
                         className='flex flex-row items-center justify-center gap-4'>
                         <div className='w-full flex flex-col items-center justify-center gap-3'>
-                            <h2 className='w-full text-2xl text-end'>
+                            <h2 className='w-full text-md md:text-lg lg:text-xl xl:text-2xl text-end'>
                                 {item.title}
                             </h2>
-                            <h3 className='w-full text-lg text-end font-light'>
+                            <h3 className='w-full text-xs md:text-sm lg:text-md xl:text-lg text-end font-light'>
                                 {item.description}
                             </h3>
                         </div>
                         <Image
-                            className='size-28'
+                            className='size-16 md:size-20 lg:size-24 xl:size-28'
                             src={item.image}
-                            alt='coffee'
+                            alt={item.title}
                             width={100}
                             height={100}
                             quality={100}
