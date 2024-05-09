@@ -92,16 +92,17 @@ const Lastest = () => {
     }
 
     return (
-        <div className='select-none mt-20 w-full flex flex-col items-center justify-center gap-12 px-16'>
+        <div className='select-none mt-20 w-full flex flex-col items-center justify-center gap-6 md:gap-8 lg:gap-10 xl:gap-12 px-2 sm:px-5 md:px-8 lg:px-14 xl:px-16'>
             <div className='flex flex-row items-center justify-between w-full'>
                 <div
-                    className='flex flex-row items-center justify-center gap-2 text-lg transition-all duration-200 cursor-pointer text-brown-200 hover:text-white hover:bg-brown-600 hover:scale-105 active:scale-95 rounded-xl px-4 py-2'
+                    className='flex flex-row items-center justify-center gap-2 text-sm md:text-md xl:text-lg transition-all duration-200 cursor-pointer text-brown-200 hover:text-white hover:bg-brown-600 hover:scale-105 active:scale-95 rounded-xl px-4'
                     onClick={handleClickMore}
                 >
                     <KeyboardArrowLeftRoundedIcon />
-                    <h6>مشاهده همه</h6>
+                    <h6 className='hidden md:block'>مشاهده همه</h6>
+                    <h6 className='block md:hidden'>بیشتر</h6>
                 </div>
-                <h2 dir='rtl' className='self-end text-brown-200 text-5xl fontMorvarid'>
+                <h2 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>
                     آخرین ها:
                 </h2>
             </div>
