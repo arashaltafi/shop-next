@@ -7,8 +7,8 @@ const bean2 = '/images/coffee-beans-4.png';
 
 const Menu = () => {
     return (
-        <div className='select-none mt-28 w-full flex flex-col items-center justify-center gap-8 px-16'>
-            <h2 className='text-5xl fontMorvarid shadow-title'>منو اصلی</h2>
+        <div className='select-none md:mt-16 lg:mt-20 xl:mt-28 w-full flex flex-col items-center justify-center gap-8 px-16'>
+            <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid shadow-title'>منو اصلی</h2>
 
             <div className='relative w-full flex flex-row items-center justify-around gap-x-16'>
                 <div className='w-full flex flex-col items-center justify-center gap-y-16 text-brown-500'>
