@@ -114,7 +114,7 @@
   }
 
   .customBorderBottom {
-    border-radius: 25% 25% 50% 50% / 0% 0% 10% 10%;
+    @apply rounded-xSmall sm:rounded-small md:rounded-medium lg:rounded-large xl:rounded-xLarge
   }
 
   @keyframes translateAndBack {
