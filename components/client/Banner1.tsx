@@ -44,9 +44,9 @@ const Banner1 = () => {
                     banners.map((banner) => {
                         return (
                             <SwiperSlide key={banner.id}>
-                                <div className='relative flex flex-row gap-8 items-center justify-between mx-auto w-[98%] md:w-[95%] lg:w-[90%] xl:w-[80%] min-h-96 px-8 md:px-12 lg:px-14 xl:px-16 py-4 md:py-6 lg:py-7 xl:py-8 bg-[#54372B] rounded-2xl border border-solid border-brown-500'>
+                                <div className='relative flex flex-row gap-8 items-center justify-between mx-auto w-[95%] lg:w-[90%] xl:w-[80%] xl:min-h-96 px-8 md:px-12 lg:px-14 xl:px-16 py-2 sm:py-4 md:py-6 lg:py-7 xl:py-8 bg-[#54372B] rounded-2xl border border-solid border-brown-500'>
                                     <Image
-                                        className='h-full w-auto -my-12 lg:-my-16 xl:-my-20 -ms-16 cursor-pointer hover:brightness-125 transition-all duration-150'
+                                        className='h-56 sm:h-72 md:h-80 lg:h-full lg:w-auto md:-my-12 lg:-my-16 xl:-my-20 -ms-8 sm:-ms-10 md:-ms-12 lg:-ms-14 xl:-ms-16 cursor-pointer hover:brightness-125 transition-all duration-150'
                                         src={banner.image}
                                         alt="banner 1"
                                         width={500}
@@ -55,7 +55,7 @@ const Banner1 = () => {
                                         loading='lazy'
                                     />
 
-                                    <h2 dir='rtl' className='w-full py-8 font-light text-sm md:text-md lg:text-lg xl:text-xl leading-8 text-brown-200 line-clamp-5 text-ellipsis text-justify'>
+                                    <h2 dir='rtl' className='w-full font-light text-sm md:text-md lg:text-lg xl:text-xl leading-8 text-brown-200 line-clamp-5 text-ellipsis text-justify'>
                                         {banner.description}
                                     </h2>
 
