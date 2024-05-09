@@ -41,6 +41,12 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }: any) {
+      addVariant("child", "& > *")
+      addVariant("child-hover", "& > *:hover")
+      addVariant("child-active", "& > *:active")
+    }
+  ],
 };
 export default config;
