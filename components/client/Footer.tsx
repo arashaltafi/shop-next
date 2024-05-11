@@ -53,17 +53,17 @@ const Footer = () => {
       <Image
         className='absolute inset-0 size-full bg-gradient-to-r from-[10%] to-[90%] from-brown-900 to-transparent border-t border-solid border-brown-400 -z-10'
         src={bgFooter}
-        alt='background-footer'
+        alt='background footer'
         width={1000}
         height={1000}
         loading='lazy'
         quality={100}
       />
 
-      <div className='w-full flex flex-row gap-8 items-center justify-between'>
+      <div className='w-full flex flex-col-reverse lg:flex-row gap-8 items-center justify-between'>
         <div className='xl:w-full flex flex-col gap-8 items-center justify-center'>
           <Image
-            className='size-48 cursor-pointer transition-all duration-150 hover:brightness-125'
+            className='size-40 sm:size-48 cursor-pointer transition-all duration-150 hover:brightness-125'
             src={iconFooter1}
             alt='icon-footer'
             width={500}
@@ -73,7 +73,7 @@ const Footer = () => {
           />
           <div className='w-full flex flex-row gap-4 items-center justify-center'>
             <Image
-              className='size-24 bg-brown-50 px-4 py-2 rounded-lg cursor-pointer hover:bg-brown-200 transition-all duration-150'
+              className='size-20 sm:size-24 bg-brown-50 px-4 py-2 rounded-lg cursor-pointer hover:bg-brown-200 transition-all duration-150'
               src={iconFooter2}
               alt='icon-footer'
               width={500}
@@ -82,7 +82,7 @@ const Footer = () => {
               quality={100}
             />
             <Image
-              className='size-24 bg-brown-50 px-4 py-2 rounded-lg cursor-pointer hover:bg-brown-200 transition-all duration-150'
+              className='size-20 sm:size-24 bg-brown-50 px-4 py-2 rounded-lg cursor-pointer hover:bg-brown-200 transition-all duration-150'
               src={iconFooter3}
               alt='icon-footer'
               width={500}
@@ -91,7 +91,7 @@ const Footer = () => {
               quality={100}
             />
             <Image
-              className='size-24 bg-brown-50 px-4 py-2 rounded-lg cursor-pointer hover:bg-brown-200 transition-all duration-150'
+              className='size-20 sm:size-24 bg-brown-50 px-4 py-2 rounded-lg cursor-pointer hover:bg-brown-200 transition-all duration-150'
               src={iconFooter4}
               alt='icon-footer'
               width={500}
@@ -103,7 +103,7 @@ const Footer = () => {
         </div>
         <div className='w-full flex flex-col gap-8 items-center justify-center'>
           <Image
-            className='size-28 self-end cursor-pointer transition-all duration-150 hover:brightness-125'
+            className='size-24 sm:size-28 self-end cursor-pointer transition-all duration-150 hover:brightness-125'
             src={logo}
             alt='logo'
             width={300}
@@ -111,83 +111,83 @@ const Footer = () => {
             loading='lazy'
             quality={100}
           />
-          <div className='w-full flex flex-row gap-8 items-center justify-center'>
-            <div className='w-full flex flex-col items-end justify-center gap-4'>
-              <h5 className='text-lg text-brown-100 mb-4'>ارتباط با ما</h5>
+          <div className='w-full flex flex-col sm:flex-row gap-16 sm:gap-8 items-center justify-center'>
+            <div className='w-full flex flex-col items-end justify-center gap-4 child:text-center child:sm:text-end child:sm:w-auto child:w-full'>
+              <h5 className='text-base lg:text-lg text-brown-100 mb-4'>ارتباط با ما</h5>
               <Link
                 href={'/about'}
-                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 درباره ما
               </Link>
               <Link
                 href={'/support'}
-                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 پشتیبانی
               </Link>
               <Link
                 href={'/guide'}
-                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 راهنمای خرید آنلاین
               </Link>
               <Link
                 href={'/rules'}
-                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 قوانین و مقررات
               </Link>
             </div>
-            <div className='w-full flex flex-col items-end justify-center gap-4'>
-              <h5 className='text-lg text-brown-100 mb-4'>دسترسی سریع</h5>
+            <div className='w-full flex flex-col items-end justify-center gap-4 child:text-center child:sm:text-end child:sm:w-auto child:w-full'>
+              <h5 className='text-base lg:text-lg text-brown-100 mb-4'>دسترسی سریع</h5>
               <Link
                 href={'/coffee'}
-                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 قهوه
               </Link>
               <Link
                 href={'/coffeeInstant'}
-                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 قهوه فوری
               </Link>
               <Link
                 href={'/coffeeEquipment'}
-                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 تجهیزات قهوه
               </Link>
               <Link
                 href={'/tea'}
-                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 چای و دمنوش
               </Link>
             </div>
-            <div className='w-full flex flex-col items-end justify-center gap-4'>
-              <h5 className='text-lg text-brown-100 mb-4'>آدرس</h5>
+            <div className='w-full flex flex-col items-end justify-center gap-4 child:text-center child:sm:text-end child:sm:w-auto child:w-full'>
+              <h5 className='text-base lg:text-lg text-brown-100 mb-4'>آدرس</h5>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-base font-light'>
+                <h6 className='text-sm lg:text-base font-light'>
                   ایران، تهران
                 </h6>
                 <LocationOnRoundedIcon />
               </div>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-base font-light'>
+                <h6 className='text-sm lg:text-base font-light'>
                   شنبه - پنجشنبه
                 </h6>
                 <DateRangeRoundedIcon />
               </div>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-base font-light'>
+                <h6 className='text-sm lg:text-base font-light'>
                   arashaltafi1377@gmail.com
                 </h6>
                 <EmailRoundedIcon />
               </div>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-base font-light'>
+                <h6 className='text-sm lg:text-base font-light'>
                   +98 918 767 7641
                 </h6>
                 <PhoneAndroidRoundedIcon />
