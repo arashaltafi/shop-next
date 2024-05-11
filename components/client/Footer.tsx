@@ -113,81 +113,81 @@ const Footer = () => {
           />
           <div className='w-full flex flex-col sm:flex-row gap-16 sm:gap-8 items-center justify-center'>
             <div className='w-full flex flex-col items-end justify-center gap-4 child:text-center child:sm:text-end child:sm:w-auto child:w-full'>
-              <h5 className='text-base lg:text-lg text-brown-100 mb-4'>ارتباط با ما</h5>
+              <h5 className='text-lg text-brown-100 mb-4'>ارتباط با ما</h5>
               <Link
                 href={'/about'}
-                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 درباره ما
               </Link>
               <Link
                 href={'/support'}
-                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 پشتیبانی
               </Link>
               <Link
                 href={'/guide'}
-                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 راهنمای خرید آنلاین
               </Link>
               <Link
                 href={'/rules'}
-                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 قوانین و مقررات
               </Link>
             </div>
             <div className='w-full flex flex-col items-end justify-center gap-4 child:text-center child:sm:text-end child:sm:w-auto child:w-full'>
-              <h5 className='text-base lg:text-lg text-brown-100 mb-4'>دسترسی سریع</h5>
+              <h5 className='text-lg text-brown-100 mb-4'>دسترسی سریع</h5>
               <Link
                 href={'/coffee'}
-                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 قهوه
               </Link>
               <Link
                 href={'/coffeeInstant'}
-                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 قهوه فوری
               </Link>
               <Link
                 href={'/coffeeEquipment'}
-                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 تجهیزات قهوه
               </Link>
               <Link
                 href={'/tea'}
-                className='text-sm lg:text-base font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 چای و دمنوش
               </Link>
             </div>
             <div className='w-full flex flex-col items-end justify-center gap-4 child:text-center child:sm:text-end child:sm:w-auto child:w-full'>
-              <h5 className='text-base lg:text-lg text-brown-100 mb-4'>آدرس</h5>
+              <h5 className='text-lg text-brown-100 mb-4'>آدرس</h5>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-sm lg:text-base font-light'>
+                <h6 className='text-base font-light'>
                   ایران، تهران
                 </h6>
                 <LocationOnRoundedIcon />
               </div>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-sm lg:text-base font-light'>
+                <h6 className='text-base font-light'>
                   شنبه - پنجشنبه
                 </h6>
                 <DateRangeRoundedIcon />
               </div>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-sm lg:text-base font-light'>
+                <h6 className='text-base font-light'>
                   arashaltafi1377@gmail.com
                 </h6>
                 <EmailRoundedIcon />
               </div>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-sm lg:text-base font-light'>
+                <h6 className='text-base font-light'>
                   +98 918 767 7641
                 </h6>
                 <PhoneAndroidRoundedIcon />
@@ -197,7 +197,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <p dir='rtl' className='w-full text-brown-100 text-xs sm:text-sm font-light leading-6 sm:leading-8 list-disc text-ellipsis text-justify'>
+      <p dir='rtl' className='w-full text-brown-100 text-sm font-light leading-6 sm:leading-8 list-disc text-ellipsis text-justify'>
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
       </p>
 
