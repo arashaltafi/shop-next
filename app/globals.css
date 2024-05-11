@@ -61,7 +61,7 @@
   }
 
   .btn {
-    @apply rounded-lg hover:rounded-md px-6 py-2 text-lg font-medium;
+    @apply rounded-md sm:rounded-lg hover:rounded-sm hover:sm:rounded-md px-2.5 sm:px-3 md:px-4 lg:px-5 xl:px-6 py-1 sm:py-1.5 md:py-2 text-sm sm:text-base md:text-lg font-medium;
   }
 
   .btnSuccess {
