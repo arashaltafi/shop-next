@@ -38,33 +38,34 @@ const vazirFont = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Arash Altafi",
-  description: "Arash Altafi Portfolio",
+  title: {
+    default: 'Coffe Shop',
+    template: '%s | Coffee Shop'
+  },
+  description: "Coffe Shop Online",
+  keywords: ['shop', 'shops', 'coffee', 'coffeeshop', 'coffee-shop'],
   authors: [
     {
       name: 'Arash Altafi',
     }
   ],
   icons: {
-    icon: "/images/arash.png",
+    icon: "/images/logo.png",
   },
-  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover, user-scalable=no",
   themeColor: '#f8f8f8',
   appleWebApp: {
-    title: 'Arash Altafi',
+    title: 'Coffee Shop',
     capable: true,
     statusBarStyle: 'default',
   },
-  manifest: '/manifest.json',
   other: {
     "msapplication-TileColor": "#f8f8f8",
-    "msapplication-TileImage": "/images/arash.png",
+    "msapplication-TileImage": "/images/logo.png",
     "theme-color": "#f8f8f8",
     "apple-mobile-web-app-status-bar-style": "default",
-    "apple-mobile-web-app-title": "Arash Altafi",
+    "apple-mobile-web-app-title": "Coffee Shop",
     "google": "notranslate",
-    "charset": "UTF-8",
-    "darkreader-lock": "",
+    "charset": "UTF-8"
   }
 }
 
@@ -73,6 +74,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  viewportFit: 'cover'
 }
 
 export default function RootLayout({
@@ -82,7 +84,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      {/* <Script src='/scripts/script.js' /> */}
+      <head>
+        <meta name="darkreader-lock" />
+        <meta name="HandheldFriendly" content="true" />
+      </head>
+      <Script src='/scripts/script.js' />
       <body className={vazirFont.className}>
         <AppRouterCacheProvider>
           {children}
