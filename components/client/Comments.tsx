@@ -97,7 +97,6 @@ const Comments = () => {
             return (
               <SwiperSlide key={item.id} className="size-[200px] rounded-lg overflow-hidden">
                 <div
-                  key={item.id}
                   className='relative bg-[#291a1e] cursor-pointer group text-start flex flex-col items-center justify-center gap-8 rounded-xl px-8 py-5 border-2 border-solid border-brown-700 text-brown-200 hover:text-brown-100 hover:bg-brown-900 transition-all duration-200'
                 >
                   <h3 dir='rtl' className='w-full text-xl lg:text-2xl xl:text-3xl line-clamp-1 text-ellipsis fontMorvarid'>

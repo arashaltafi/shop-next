@@ -33,7 +33,7 @@ const Categories = () => {
                 title: 'انواع قهوه',
                 image: getOut,
             }, {
-                id: 4,
+                id: 5,
                 title: 'شیرینی',
                 image: typesCoffee,
             }
