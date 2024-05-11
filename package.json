@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
+    "@emotion/server": "^11.11.0",
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "@mui/icons-material": "^5.15.16",
     "@mui/material-nextjs": "^5.15.11",
