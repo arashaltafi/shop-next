@@ -1,34 +1,30 @@
-"use client"
-
 import { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
-import { Player } from "@lottiefiles/react-lottie-player";
-const notFound = "/lotties/404.json";
 
 const NotFound = () => {
-
-    const handleClick = () => {
-        window.open("/", "_self")
-    }
-
     return (
         <div
-            className='select-none w-full h-[90vh] flex flex-col items-center justify-around px-16 py-8 overflow-hidden'>
-            <Player
-                className='w-1/2 h-auto'
-                src={notFound}
-                autoplay
-                loop
-                speed={1}
+            className='select-none w-full flex flex-col gap-12 items-center justify-around px-10 sm:px-12 md:px-14 lg:px-16 py-4 sm:py-6 md:py-8 overflow-hidden'>
+            <Image
+                className='size-72 sm:size-80 md:size-96 shake2'
+                src='/images/404.png'
+                alt='404-notFound'
+                width={500}
+                height={500}
+                priority
+                loading='eager'
+                quality={100}
             />
 
-            <h1 className='h1'>
+            <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>
                 Page Not Found !
             </h1>
 
-            <button onClick={handleClick} className='btn btnPrimary'>
+            <Link href={'/'} className='btn btnPrimary'>
                 Back To Home
-            </button>
+            </Link>
         </div>
     )
 }
@@ -36,14 +32,9 @@ const NotFound = () => {
 export default NotFound
 
 export const metadata: Metadata = {
-    title: "Not Found | 404",
+    title: "Not Found",
     description: "This Page Noting Found!",
-    authors: [
-        {
-            name: 'Arash Altafi',
-        }
-    ],
     icons: {
-        icon: "/images/404.png",
+        icon: "/images/logo-grayscale.png",
     }
 }
