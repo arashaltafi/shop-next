@@ -4,6 +4,7 @@ import Image from 'next/image'
 const bg1 = '/images/bg-1.png';
 const bg2 = '/images/bg-2.png';
 const bg3 = '/images/bg-3.png';
+const bg4 = '/images/bg-4.png';
 
 const MainHeader = () => {
     return (
@@ -48,11 +49,11 @@ const MainHeader = () => {
             </div>
 
             <Image
-                className='-z-10 w-full absolute top-0 bottom-0'
-                src={'/images/bg-4.png'}
+                className='hidden sm:block -z-10 w-full absolute top-0 bottom-0'
+                src={bg4}
                 width={500}
                 height={500}
-                alt="background3"
+                alt="background 4"
                 quality={100}
                 loading='lazy'
             />

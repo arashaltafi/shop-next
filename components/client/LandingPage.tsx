@@ -13,7 +13,7 @@ import Footer from './Footer'
 
 const LandingPage = () => {
   return (
-    <div className='flex flex-col gap-20 items-center justify-start w-full'>
+    <div className='flex flex-col gap-12 sm:gap-16 md:gap-20 items-center justify-start w-full'>
       <CoffeeBeans />
       <MainHeader />
       <Banner1 />
