@@ -5,12 +5,12 @@ import Header from './Header'
 import Image from 'next/image'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 const bg1 = '/images/bg-1.png'
 const bg2 = '/images/bg-2.png'
 const bg3 = '/images/bg-3.png'
 const bg4 = '/images/bg-4.png'
+const logo = '/images/logo.png';
 
 const MainHeader = () => {
     const router = useRouter()
@@ -132,9 +132,21 @@ const MainHeader = () => {
 
                 <div
                     onClick={handleBlur}
-                    className='absolute top-4 right-4 cursor-pointer hover:scale-105 active:scale-95 transition-all duration-150'>
+                    className='absolute bottom-4 cursor-pointer hover:scale-105 active:scale-95 transition-all duration-150'>
                     <CancelRoundedIcon />
                 </div>
+
+                <Image
+                    onClick={handleBlur}
+                    className='size-16 sm:size-20 cursor-pointer hover:brightness-125 absolute top-4 left-4 hover:scale-105 active:scale-95 transition-all duration-150'
+                    src={logo}
+                    alt="logo"
+                    width={100}
+                    height={100}
+                    quality={100}
+                    priority
+                    loading='eager'
+                />
 
                 <ul
                     onClick={(e) => handleClickMenuItems(e)}
