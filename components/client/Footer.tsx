@@ -116,25 +116,25 @@ const Footer = () => {
               <h5 className='text-lg text-brown-100 mb-4'>ارتباط با ما</h5>
               <Link
                 href={'/about'}
-                className='text-md font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 درباره ما
               </Link>
               <Link
                 href={'/support'}
-                className='text-md font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 پشتیبانی
               </Link>
               <Link
                 href={'/guide'}
-                className='text-md font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 راهنمای خرید آنلاین
               </Link>
               <Link
                 href={'/rules'}
-                className='text-md font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 قوانین و مقررات
               </Link>
@@ -143,25 +143,25 @@ const Footer = () => {
               <h5 className='text-lg text-brown-100 mb-4'>دسترسی سریع</h5>
               <Link
                 href={'/coffee'}
-                className='text-md font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 قهوه
               </Link>
               <Link
                 href={'/coffeeInstant'}
-                className='text-md font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 قهوه فوری
               </Link>
               <Link
                 href={'/coffeeEquipment'}
-                className='text-md font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 تجهیزات قهوه
               </Link>
               <Link
                 href={'/tea'}
-                className='text-md font-light text-brown-200 hover:text-brown-300 transition-all'
+                className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
                 چای و دمنوش
               </Link>
@@ -169,25 +169,25 @@ const Footer = () => {
             <div className='w-full flex flex-col items-end justify-center gap-4'>
               <h5 className='text-lg text-brown-100 mb-4'>آدرس</h5>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-md font-light'>
+                <h6 className='text-base font-light'>
                   ایران، تهران
                 </h6>
                 <LocationOnRoundedIcon />
               </div>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-md font-light'>
+                <h6 className='text-base font-light'>
                   شنبه - پنجشنبه
                 </h6>
                 <DateRangeRoundedIcon />
               </div>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-md font-light'>
+                <h6 className='text-base font-light'>
                   arashaltafi1377@gmail.com
                 </h6>
                 <EmailRoundedIcon />
               </div>
               <div className='flex flex-row items-center justify-center gap-2 transition-all text-brown-200 hover:text-brown-300'>
-                <h6 className='text-md font-light'>
+                <h6 className='text-base font-light'>
                   +98 918 767 7641
                 </h6>
                 <PhoneAndroidRoundedIcon />
@@ -209,7 +209,7 @@ const Footer = () => {
           <div className='w-full flex flex-row gap-x-2 items-center justify-end'>
             <input
               dir='ltr'
-              className='w-3/4 px-4 py-2 rounded-md text-md font-light text-black'
+              className='w-3/4 px-4 py-2 rounded-md text-base font-light text-black'
               key={'input-footer'}
               type="email"
               placeholder='Email ...'
@@ -267,7 +267,7 @@ const Footer = () => {
             </div>
           </Tooltip>
         </div>
-        <h6 dir='rtl' className='flex-1 text-md font-light'>
+        <h6 dir='rtl' className='flex-1 text-base font-light'>
           کلیه حقوق این سایت متعلق به آنلاین قهوه می باشد.
         </h6>
       </div>

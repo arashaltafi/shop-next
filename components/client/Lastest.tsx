@@ -95,7 +95,7 @@ const Lastest = () => {
         <div className='select-none md:mt-12 lg:mt-16 xl:mt-20 w-full flex flex-col items-center justify-center gap-x-6 md:gap-x-8 lg:gap-x-10 xl:gap-x-12 gap-y-8 md:gap-y-10 lg:gap-y-12 xl:gap-y-16 px-2 sm:px-5 md:px-8 lg:px-14 xl:px-16'>
             <div className='flex flex-row items-center justify-between w-full'>
                 <div
-                    className='flex flex-row items-center justify-center gap-2 text-sm md:text-md xl:text-lg transition-all duration-200 cursor-pointer text-brown-200 hover:text-white hover:bg-brown-600 hover:scale-105 active:scale-95 rounded-xl px-4'
+                    className='flex flex-row items-center justify-center gap-2 text-sm md:text-base xl:text-lg transition-all duration-200 cursor-pointer text-brown-200 hover:text-white hover:bg-brown-600 hover:scale-105 active:scale-95 rounded-xl px-4'
                     onClick={handleClickMore}
                 >
                     <KeyboardArrowLeftRoundedIcon />
@@ -132,14 +132,14 @@ const Lastest = () => {
                             </div>
 
                             <div className='flex flex-col items-center justify-center gap-2 font-light pb-4 sm:pb-8'>
-                                <h3 id={`product-${product.id}`} dir='rtl' className='font-bold text-sm md:text-md lg:text-lg xl:text-xl text-ellipsis line-clamp-2 max-w-64 text-center'>
+                                <h3 id={`product-${product.id}`} dir='rtl' className='font-bold text-sm md:text-base lg:text-lg xl:text-xl text-ellipsis line-clamp-2 max-w-64 text-center'>
                                     {product.name}
                                 </h3>
                                 <div className='flex flex-col items-center justify-center'>
-                                    <h4 dir='rtl' className='mt-2 fontMorvarid text-xs md:text-sm lg:text-md xl:text-lg text-ellipsis line-clamp-1 max-w-64'>
+                                    <h4 dir='rtl' className='mt-2 fontMorvarid text-xs md:text-sm lg:text-base xl:text-lg text-ellipsis line-clamp-1 max-w-64'>
                                         {product.description}
                                     </h4>
-                                    <h5 dir='rtl' className='text-xs md:text-sm lg:text-md xl:text-lg text-ellipsis line-clamp-1 max-w-64'>
+                                    <h5 dir='rtl' className='text-xs md:text-sm lg:text-base xl:text-lg text-ellipsis line-clamp-1 max-w-64'>
                                         <span className='fontMorvarid'>{convertPrice(50000)}</span> تومان
                                     </h5>
                                 </div>
@@ -148,7 +148,7 @@ const Lastest = () => {
                                 </div>
                             </div>
 
-                            <div id={`order-${product.id}`} className='hidden sm:block z-40 text-md absolute -bottom-7 lg:-bottom-8 px-4 lg:px-5 py-2 md:py-2.5 lg:py-3 bg-brown-600 text-brown-200 drop-shadow-md rounded-xl hover:bg-green-500 hover:scale-[101%] active:scale-[99%]'>
+                            <div id={`order-${product.id}`} className='hidden sm:block z-40 text-base absolute -bottom-7 lg:-bottom-8 px-4 lg:px-5 py-2 md:py-2.5 lg:py-3 bg-brown-600 text-brown-200 drop-shadow-md rounded-xl hover:bg-green-500 hover:scale-[101%] active:scale-[99%]'>
                                 سفارش
                             </div>
 

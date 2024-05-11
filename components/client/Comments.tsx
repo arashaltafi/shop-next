@@ -119,7 +119,7 @@ const Comments = () => {
                     }}
                   />
 
-                  <p dir='rtl' className='w-full text-sm lg:text-md xl:text-lg min-h-36 line-clamp-5 text-ellipsis text-justify font-light'>
+                  <p dir='rtl' className='w-full text-sm lg:text-base xl:text-lg min-h-36 line-clamp-5 text-ellipsis text-justify font-light'>
                     {item.description}
                   </p>
                   <span id={`comment-${item.id}`} className='z-40 absolute inset-0' />

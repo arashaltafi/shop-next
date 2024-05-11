@@ -22,7 +22,7 @@ const MainHeader = () => {
                 <h2 className='shadow-title text-center text-2xl lg:text-3xl xl:text-4xl blink fontMorvarid'>
                     خرید آنلاین انواع قهوه
                 </h2>
-                <p className='text-center text-brown-300 text-md lg:text-lg xl:text-xl'>
+                <p className='text-center text-brown-300 text-base lg:text-lg xl:text-xl'>
                     فروشگاه اینترنتی قهوه، خرید انواع پودر و دان قهوه با قیمت مناسب
                 </p>
             </div>

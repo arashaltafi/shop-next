@@ -60,7 +60,7 @@ const Categories = () => {
                                 quality={100}
                                 loading='lazy'
                             />
-                            <h6 className='text-sm md:text-md lg:text-lg xl:text-xl text-brown-100 group-hover:brightness-110 transition-all font-light text-nowrap text-ellipsis line-clamp-1 text-center'>
+                            <h6 className='text-sm md:text-base lg:text-lg xl:text-xl text-brown-100 group-hover:brightness-110 transition-all font-light text-nowrap text-ellipsis line-clamp-1 text-center'>
                                 {item.title}
                             </h6>
                         </div>

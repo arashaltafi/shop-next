@@ -46,10 +46,10 @@ const Services = () => {
                         key={item.id}
                         className='flex flex-col-reverse sm:flex-row items-center justify-center gap-4'>
                         <div className='w-full flex flex-col items-center justify-center gap-3'>
-                            <h2 className='w-full text-md md:text-lg lg:text-xl xl:text-2xl text-center sm:text-end'>
+                            <h2 className='w-full text-base md:text-lg lg:text-xl xl:text-2xl text-center sm:text-end'>
                                 {item.title}
                             </h2>
-                            <h3 className='w-full text-xs md:text-sm lg:text-md xl:text-lg text-center sm:text-end font-light'>
+                            <h3 className='w-full text-xs md:text-sm lg:text-base xl:text-lg text-center sm:text-end font-light'>
                                 {item.description}
                             </h3>
                         </div>
