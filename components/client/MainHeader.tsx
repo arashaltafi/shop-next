@@ -15,6 +15,13 @@ const bg4 = '/images/bg-4.png'
 const MainHeader = () => {
     const router = useRouter()
 
+    // close menu on back click 
+    useEffect(() => {
+        window.addEventListener('popstate', () => {
+            handleBlur()
+        })
+    }, [])
+
     const scrollToId = (id: string) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     }
@@ -32,6 +39,8 @@ const MainHeader = () => {
         const menu = document.getElementById("menu")
         const blur = document.getElementById("blur")
         if (menu && blur) {
+            // add history state for handling back click
+            window.history.pushState(null, document.title, window.location.href)
             menu.classList.remove("-translate-x-[1000px]")
             blur.classList.remove("hidden")
         }
