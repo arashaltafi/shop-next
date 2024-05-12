@@ -50,6 +50,7 @@ const Banner2 = () => {
                                     <Image
                                         className='h-52 sm:h-64 md:h-72 lg:h-full lg:w-auto -mr-8 sm:-mr-10 md:-mr-12 lg:-mr-14 xl:-mr-16 cursor-pointer hover:brightness-125 transition-all duration-150'
                                         src={banner.image}
+                                        placeholder='blur'
                                         alt="banner 2"
                                         width={500}
                                         height={500}
