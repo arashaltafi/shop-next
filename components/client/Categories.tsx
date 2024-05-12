@@ -55,7 +55,6 @@ const Categories = () => {
                                 className='size-32 sm:size-36 md:size-40 lg:size-44 xl:size-48 group-hover:brightness-110 transition-all overflow-hidden'
                                 src={item.image}
                                 alt={item.title}
-                                placeholder='blur'
                                 width={200}
                                 height={200}
                                 quality={100}

@@ -120,7 +120,6 @@ const Lastest = () => {
                                     className='w-full h-44 sm:h-48 md:h-56 lg:h-60 xl:h-64 group-hover:brightness-110 transition-all bg-brown-500 rounded-t-xl rounded-b-sm'
                                     src={product.image}
                                     alt={product.name}
-                                    placeholder='blur'
                                     width={200}
                                     height={200}
                                     quality={100}

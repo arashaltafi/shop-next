@@ -89,7 +89,6 @@ const MainHeader = () => {
                     height={300}
                     src={bg3}
                     alt="background3"
-                    placeholder='blur'
                     quality={100}
                     loading='lazy'
                 />
@@ -106,7 +105,6 @@ const MainHeader = () => {
                     width={500}
                     height={500}
                     src={bg1}
-                    placeholder='blur'
                     alt="background1"
                     quality={100}
                     loading='lazy'
@@ -116,7 +114,6 @@ const MainHeader = () => {
                     width={500}
                     height={500}
                     src={bg2}
-                    placeholder='blur'
                     alt="background2"
                     quality={100}
                     loading='lazy'
