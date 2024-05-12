@@ -9,6 +9,7 @@ import { EffectCards, Navigation, EffectCube } from 'swiper/modules';
 import Rating from '@mui/material/Rating';
 import Image from 'next/image';
 import { getDeviceSize } from '@/utils/GlobalUtils';
+import { ParallaxBanner } from "react-scroll-parallax"
 const wave1 = 'images/svg-wave-1.svg';
 
 const Comments = () => {
@@ -62,17 +63,19 @@ const Comments = () => {
   return (
     <div className='relative select-none md:mt-12 lg:mt-16 xl:mt-20 w-full flex flex-col items-center justify-center gap-x-6 md:gap-x-8 lg:gap-x-10 xl:gap-x-12 gap-y-8 md:gap-y-10 lg:gap-y-12 xl:gap-y-16 px-2 sm:px-5 md:px-8 lg:px-14 xl:px-16'>
 
-      <div
-        className='absolute w-full h-full -z-10'
+      <ParallaxBanner
+        layers={[
+          { image: '/images/bg-5.png', speed: -40 },
+          { image: '/images/bg-5.png', speed: -10 },
+        ]}
+        className="w-full h-96"
         style={{
-          background: "url('/images/bg-5.png')",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
+          position: 'absolute',
           backgroundColor: "#3E2723",
-          filter: 'blur(2px)'
-        }}>
-
-      </div>
+          filter: 'blur(2px)',
+          zIndex: '-10'
+        }}
+      />
       <h2 dir='rtl' className='w-full text-start text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-8 fontMorvarid'>
         نظریات مشتریان:
       </h2>
