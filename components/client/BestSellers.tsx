@@ -5,6 +5,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import Tilt from 'react-parallax-tilt';
+import { getDeviceSize } from '@/utils/GlobalUtils';
 const product1 = '/images/p1.png';
 const product2 = '/images/p2.png';
 const product3 = '/images/p3.png';
@@ -122,7 +123,7 @@ const BestSellers = () => {
                             tiltMaxAngleY={5}
                             transitionSpeed={3000}
                             perspective={1000}
-                            tiltEnable={true}
+                            tiltEnable={getDeviceSize() === 'xm' ? false : getDeviceSize() === 'sm' ? false : true}
                             tiltReverse={false}
                             reset={true}
                             glareColor={'#221518'}

@@ -1,5 +1,6 @@
 "use client"
 
+import { getDeviceSize } from '@/utils/GlobalUtils';
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import Tilt from 'react-parallax-tilt';
@@ -60,7 +61,7 @@ const Categories = () => {
                                 tiltMaxAngleY={20}
                                 transitionSpeed={2500}
                                 perspective={500}
-                                tiltEnable={true}
+                                tiltEnable={getDeviceSize() === 'xm' ? false : getDeviceSize() === 'sm' ? false : true}
                                 tiltReverse={false}
                                 reset={true}
                                 glareColor={'#221518'}
