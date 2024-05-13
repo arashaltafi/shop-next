@@ -17,7 +17,6 @@ const MainHeader = () => {
                     height={300}
                     src={bg3}
                     placeholder='blur'
-                    blurDataURL={bg3}
                     alt="background3"
                     quality={100}
                     loading='lazy'
@@ -36,7 +35,6 @@ const MainHeader = () => {
                     height={500}
                     src={bg1}
                     placeholder='blur'
-                    blurDataURL={bg1}
                     alt="background1"
                     quality={100}
                     loading='lazy'
@@ -47,7 +45,6 @@ const MainHeader = () => {
                     height={500}
                     src={bg2}
                     placeholder='blur'
-                    blurDataURL={bg2}
                     alt="background2"
                     quality={100}
                     loading='lazy'
@@ -60,7 +57,6 @@ const MainHeader = () => {
                 width={500}
                 height={500}
                 placeholder='blur'
-                blurDataURL={bg4}
                 alt="background 4"
                 quality={100}
                 loading='lazy'
