@@ -64,7 +64,7 @@ const MainHeader = () => {
 
         console.log('menuItem clicked:', targetId)
         handleScroll(targetId)
-        //router.push(`#${targetId}`) todo
+        router.push(`${targetId}`)
 
         handleBlur()
     }
@@ -167,11 +167,11 @@ const MainHeader = () => {
                         پشتیبانی
                     </li>
                     <span className='w-full h-px bg-brown-500 rounded-full' />
-                    <li id='menuItem-contactus' className='w-full py-8 text-center cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+                    <li id='menuItem-contact' className='w-full py-8 text-center cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
                         ارتباط با ما
                     </li>
                     <span className='w-full h-px bg-brown-500 rounded-full' />
-                    <li id='menuItem-aboutus' className='w-full py-8 text-center cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+                    <li id='menuItem-about' className='w-full py-8 text-center cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
                         درباره ما
                     </li>
                     <span className='w-full h-px bg-brown-500 rounded-full' />

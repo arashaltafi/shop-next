@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 const logo = '/images/logo.png';
 const search = '/images/search.svg';
@@ -48,21 +49,21 @@ const Header = () => {
       </ul>
 
       <ul className='flex gap-4 lg:gap-6 xl:gap-8 flex-row-reverse flex-1 child:text-lg child:lg:text-xl child:xl:text-2xl child:transition-all'>
-        <li className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+        <Link href={'/'} className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
           فروشگاه
-        </li>
-        <li className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+        </Link>
+        <Link href={'support'} className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
           پشتیبانی
-        </li>
-        <li className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+        </Link>
+        <Link href={'contact'} className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
           ارتباط با ما
-        </li>
-        <li className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+        </Link>
+        <Link href={'/about'} className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
           درباره ما
-        </li>
-        <li className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+        </Link>
+        <Link href={'blog'} className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
           بلاگ
-        </li>
+        </Link>
       </ul>
 
       <Image
