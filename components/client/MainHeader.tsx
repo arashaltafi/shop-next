@@ -16,7 +16,6 @@ const MainHeader = () => {
                     width={300}
                     height={300}
                     src={bg3}
-                    placeholder='blur'
                     alt="background3"
                     quality={100}
                     loading='lazy'
@@ -34,7 +33,6 @@ const MainHeader = () => {
                     width={500}
                     height={500}
                     src={bg1}
-                    placeholder='blur'
                     alt="background1"
                     quality={100}
                     loading='lazy'
@@ -44,7 +42,6 @@ const MainHeader = () => {
                     width={500}
                     height={500}
                     src={bg2}
-                    placeholder='blur'
                     alt="background2"
                     quality={100}
                     loading='lazy'
@@ -56,7 +53,6 @@ const MainHeader = () => {
                 src={bg4}
                 width={500}
                 height={500}
-                placeholder='blur'
                 alt="background 4"
                 quality={100}
                 loading='lazy'
