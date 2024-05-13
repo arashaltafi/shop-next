@@ -58,6 +58,10 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: 'default',
   },
+  twitter: {
+    title: 'Coffe Shop',
+    description: 'Coffe Shop Online'
+  },
   other: {
     "msapplication-TileColor": "#f8f8f8",
     "msapplication-TileImage": "/images/logo.png",
