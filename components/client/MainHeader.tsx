@@ -88,6 +88,8 @@ const MainHeader = () => {
                     width={300}
                     height={300}
                     src={bg3}
+                    placeholder='blur'
+                    blurDataURL={bg3}
                     alt="background3"
                     quality={100}
                     loading='lazy'
@@ -105,6 +107,8 @@ const MainHeader = () => {
                     width={500}
                     height={500}
                     src={bg1}
+                    placeholder='blur'
+                    blurDataURL={bg1}
                     alt="background1"
                     quality={100}
                     loading='lazy'
@@ -114,6 +118,8 @@ const MainHeader = () => {
                     width={500}
                     height={500}
                     src={bg2}
+                    placeholder='blur'
+                    blurDataURL={bg2}
                     alt="background2"
                     quality={100}
                     loading='lazy'
@@ -140,6 +146,8 @@ const MainHeader = () => {
                     onClick={handleBlur}
                     className='size-16 sm:size-20 cursor-pointer hover:brightness-125 absolute top-4 left-4 hover:scale-105 active:scale-95 transition-all duration-150'
                     src={logo}
+                    placeholder='blur'
+                    blurDataURL={logo}
                     alt="logo"
                     width={100}
                     height={100}
@@ -184,6 +192,8 @@ const MainHeader = () => {
                 src={bg4}
                 width={500}
                 height={500}
+                placeholder='blur'
+                blurDataURL={bg4}
                 alt="background 4"
                 quality={100}
                 loading='lazy'
