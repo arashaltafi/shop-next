@@ -15,6 +15,10 @@
     @apply list-none;
   }
 
+  * {
+    font-family: "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+  }
+
   /* WebKit (Chrome, Safari) */
   ::-webkit-scrollbar {
     /* set hidden scrollbar */
@@ -48,6 +52,11 @@
   @font-face {
     font-family: "morvarid";
     src: url('/fonts/Far_Morvarid.ttf');
+  }
+
+  @font-face {
+    font-family: "vazir-normal";
+    src: url('/fonts/Vazirmatn-Medium.ttf');
   }
 }
 

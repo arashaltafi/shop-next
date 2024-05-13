@@ -5,7 +5,7 @@ const showToast = (title: string, type: "success" | "error" | "info" | undefined
         case "success":
             toast.success(title, {
                 position: "top-right",
-                autoClose: 50000,
+                autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,

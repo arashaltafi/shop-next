@@ -21,6 +21,7 @@ import DateRangeRoundedIcon from '@mui/icons-material/DateRangeRounded'
 import { LinkType } from '@/utils/Enums'
 import { openLink } from '@/utils/GlobalUtils'
 import Link from 'next/link';
+import { showToast } from '@/utils/Toast';
 
 const Footer = () => {
   const [email, setEmail] = useState<string>('')
@@ -46,6 +47,7 @@ const Footer = () => {
   const handleClickSubmitMail = () => {
     console.log('mail:', email)
     setEmail('')
+    showToast('ایمیل شما با موفقیت ثبت گردید', 'success')
   }
 
   return (
