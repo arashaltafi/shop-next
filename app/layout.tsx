@@ -48,11 +48,11 @@ const shabnamFont = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Coffe Shop',
-    template: '%s | Coffee Shop'
+    default: 'قهوه آنلاین',
+    template: 'قهوه آنلاین | %s'
   },
-  description: "Coffe Shop Online",
-  keywords: ['shop', 'shops', 'coffee', 'coffeeshop', 'coffee-shop'],
+  description: "فروشگاه قهوه آنلاین",
+  keywords: ['shop', 'shops', 'coffee', 'coffeeshop', 'coffee-shop', 'قهوه آنلاین', 'فروشگاه قهوه', 'فروشگاه', 'قهوه'],
   authors: [
     {
       name: 'Arash Altafi',
@@ -63,13 +63,13 @@ export const metadata: Metadata = {
   },
   themeColor: '#f8f8f8',
   appleWebApp: {
-    title: 'Coffee Shop',
+    title: 'قهوه آنلاین',
     capable: true,
     statusBarStyle: 'default',
   },
   twitter: {
-    title: 'Coffe Shop',
-    description: 'Coffe Shop Online'
+    title: 'قهوه آنلاین',
+    description: "فروشگاه قهوه آنلاین"
   },
   other: {
     "msapplication-TileColor": "#f8f8f8",

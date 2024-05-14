@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React from 'react';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import Header from '@/components/client/Header';
-import CoffeeBeans from '@/components/client/CoffeeBeans';
 import Footer from '@/components/client/Footer';
 
 const NotFound = () => {
@@ -49,8 +48,8 @@ const NotFound = () => {
 export default NotFound
 
 export const metadata: Metadata = {
-    title: "Not Found",
-    description: "This Page Noting Found!",
+    title: "یافت نشد",
+    description: "این صفحه یافت نشد!",
     icons: {
         icon: "/images/logo-grayscale.png",
     }
