@@ -8,6 +8,7 @@ import Inventory2RoundedIcon from '@mui/icons-material/Inventory2Rounded';
 import CoffeeMakerRoundedIcon from '@mui/icons-material/CoffeeMakerRounded';
 import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
 import DeliveryDiningRoundedIcon from '@mui/icons-material/DeliveryDiningRounded';
+import DividerCoffee from '@/components/client/DividerCoffee'
 
 const About = () => {
     const [items, setItems] = useState<{
@@ -65,16 +66,7 @@ const About = () => {
                     </p>
                 </div>
 
-                <Image
-                    src={'/images/divider-coffee.png'}
-                    width={500}
-                    height={500}
-                    className='w-full md:w-2/3 h-16 sm:h-20 my-16 sm:my-24 md:my-32 brightness-200'
-                    alt='coffee divider'
-                    priority
-                    loading='eager'
-                    quality={100}
-                />
+                <DividerCoffee />
 
                 <h1 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>اهداف قهوه آنلاین:</h1>
                 <div className='mt-8 flex flex-col md:flex-row items-center justify-center gap-8'>
@@ -94,16 +86,7 @@ const About = () => {
                     />
                 </div>
 
-                <Image
-                    src={'/images/divider-coffee.png'}
-                    width={500}
-                    height={500}
-                    className='w-full md:w-2/3 h-16 sm:h-20 my-16 sm:my-24 md:my-32 brightness-200'
-                    alt='coffee divider'
-                    priority
-                    loading='eager'
-                    quality={100}
-                />
+                <DividerCoffee />
 
                 <h1 dir='rtl' className='text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>ارزش های قهوه آنلاین:</h1>
                 <div className='mt-16 w-full grid justify-items-center grid-cols-1 sm:grid-cols-2 items-center justify-center gap-8 -px-2 sm:-px-5 md:-px-8 lg:-px-14 xl:-px-16'>
@@ -118,16 +101,7 @@ const About = () => {
                     }
                 </div>
 
-                <Image
-                    src={'/images/divider-coffee.png'}
-                    width={500}
-                    height={500}
-                    className='w-full md:w-2/3 h-16 sm:h-20 my-16 sm:my-24 md:my-32 brightness-200'
-                    alt='coffee divider'
-                    priority
-                    loading='eager'
-                    quality={100}
-                />
+                <DividerCoffee />
 
                 <h1 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>چشم انداز قهوه آنلاین:</h1>
                 <div className='mt-8 flex flex-col-reverse md:flex-row items-center justify-center gap-8'>
