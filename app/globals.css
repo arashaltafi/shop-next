@@ -51,40 +51,40 @@
 
   @font-face {
     font-family: "morvarid";
-    src: url('/fonts/Far_Morvarid.ttf');
+    src: url('/fonts/morvarid/Far_Morvarid.ttf');
+  }
+
+  @font-face {
+    font-family: "iranYekan-normal";
+    src: url('/fonts/iranYekan/IRANYekanX-Medium.ttf');
   }
 
   @font-face {
     font-family: "vazir-normal";
-    src: url('/fonts/Vazirmatn-Medium.ttf');
-  }
-
-  @font-face {
-    font-family: "iranyekan-normal";
-    src: url('/fonts/Qs_Iranyekan.ttf');
+    src: url('/fonts/vazir/Vazirmatn-Medium.ttf');
   }
 
   @font-face {
     font-family: "shabnam-normal";
-    src: url('/fonts/font_normal.ttf');
+    src: url('/fonts/shabnam/font_normal.ttf');
   }
 }
 
 @layer components {
   .fontMorvarid {
-    font-family: "morvarid", 'shabnam-normal', 'iranyekan-normal', "vazir-normal", "vazir-medium", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+    font-family: "morvarid", 'shabnam-normal', 'iranYekan-normal', "vazir-normal", "vazir-medium", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
   }
 
   .fontVazir {
-    font-family: "vazir-normal", "vazir-medium", 'shabnam-normal', 'iranyekan-normal', "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+    font-family: "vazir-normal", "vazir-medium", 'shabnam-normal', 'iranYekan-normal', "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
   }
 
   .fontIranYekan {
-    font-family: "iranyekan-normal", "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+    font-family: "iranYekan-normal", "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
   }
 
   .fontShabnam {
-    font-family: "shabnam-normal", 'iranyekan-normal', "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+    font-family: "shabnam-normal", 'iranYekan-normal', "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
   }
 
   .btn {
