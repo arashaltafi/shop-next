@@ -33,6 +33,7 @@ const Banner2 = () => {
                 className="w-full flex flex-row flex-nowrap items-center justify-center"
                 style={{
                     padding: '32px 0px !important',
+                    overflow: 'visible'
                 }}
                 slidesPerView={1}
                 centeredSlides={true}
