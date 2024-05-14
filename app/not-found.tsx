@@ -18,8 +18,8 @@ const NotFound = () => {
                 quality={100}
             />
 
-            <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>
-                Page Not Found !
+            <h1 dir='rtl' className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>
+                صفحه  12 مورد نظر یافت نشد !!!
             </h1>
 
             <Link href={'/'} className='btn btnPrimary'>

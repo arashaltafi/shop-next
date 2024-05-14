@@ -5,34 +5,34 @@ import localFont from 'next/font/local'
 import Script from "next/script";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
-const vazirFont = localFont({
+const shabnamFont = localFont({
   src: [
     {
-      path: '../public/fonts/Vazirmatn-ExtraBold.ttf',
+      path: '../public/fonts/font_bold.ttf',
       weight: '800'
     },
     {
-      path: '../public/fonts/Vazirmatn-Bold.ttf',
+      path: '../public/fonts/font_bold.ttf',
       weight: '700'
     },
     {
-      path: '../public/fonts/Vazirmatn-SemiBold.ttf',
+      path: '../public/fonts/font_bold.ttf',
       weight: '600'
     },
     {
-      path: '../public/fonts/Vazirmatn-Medium.ttf',
+      path: '../public/fonts/font_normal.ttf',
       weight: '500'
     },
     {
-      path: '../public/fonts/Vazirmatn-Black.ttf',
+      path: '../public/fonts/font_normal.ttf',
       weight: '400'
     },
     {
-      path: '../public/fonts/Vazirmatn-Light.ttf',
+      path: '../public/fonts/font_medium.ttf',
       weight: '300'
     },
     {
-      path: '../public/fonts/Vazirmatn-ExtraLight.ttf',
+      path: '../public/fonts/font_light.ttf',
       weight: '200'
     }
   ]
@@ -94,7 +94,7 @@ export default function RootLayout({
         <meta name="HandheldFriendly" content="true" />
       </head>
       <Script src='/scripts/script.js' />
-      <body className={vazirFont.className}>
+      <body className={shabnamFont.className}>
         <AppRouterCacheProvider>
           {children}
         </AppRouterCacheProvider>

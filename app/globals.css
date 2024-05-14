@@ -16,7 +16,7 @@
   }
 
   * {
-    font-family: "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+    font-family: 'shabnam-normal', 'iranyekan-normal', "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
   }
 
   /* WebKit (Chrome, Safari) */
@@ -58,15 +58,33 @@
     font-family: "vazir-normal";
     src: url('/fonts/Vazirmatn-Medium.ttf');
   }
+
+  @font-face {
+    font-family: "iranyekan-normal";
+    src: url('/fonts/Qs_Iranyekan.ttf');
+  }
+
+  @font-face {
+    font-family: "shabnam-normal";
+    src: url('/fonts/font_normal.ttf');
+  }
 }
 
 @layer components {
   .fontMorvarid {
-    font-family: "morvarid", "vazir-normal", "vazir-medium", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+    font-family: "morvarid", 'shabnam-normal', 'iranyekan-normal', "vazir-normal", "vazir-medium", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
   }
 
   .fontVazir {
-    font-family: "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+    font-family: "vazir-normal", "vazir-medium", 'shabnam-normal', 'iranyekan-normal', "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+  }
+
+  .fontIranYekan {
+    font-family: "iranyekan-normal", "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
+  }
+
+  .fontShabnam {
+    font-family: "shabnam-normal", 'iranyekan-normal', "vazir-normal", "vazir-medium", "morvarid", Cambria, Cochin, Georgia, Times, serif, sans-serif, monospace !important;
   }
 
   .btn {
