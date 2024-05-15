@@ -199,6 +199,13 @@ const Support = () => {
                         ))
                     }
                 </div>
+
+                <DividerCoffee />
+                <h2 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>فرم تماس با ما:</h2>
+                <div className='w-full mt-8 flex flex-col items-center justify-center gap-8'>
+                    {/* todo => react hook form */}
+                </div>
+
             </div>
             <Footer />
         </div>
