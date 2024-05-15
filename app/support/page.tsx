@@ -11,6 +11,12 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import { openLink, openMail, openPhone } from '@/utils/GlobalUtils'
+import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
+import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
+import SafetyCheckOutlinedIcon from '@mui/icons-material/SafetyCheckOutlined';
+import CreditCardOutlinedIcon from '@mui/icons-material/CreditCardOutlined';
+import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
+import { url } from 'inspector'
 
 enum LinkType {
     TELEGRAM = 'telegram',
@@ -27,6 +33,12 @@ const Support = () => {
         title: string,
         link: string,
         type: LinkType
+    }[]>([])
+
+    const [sale, setSale] = useState<{
+        id: number,
+        icon: ReactElement,
+        title: string,
     }[]>([])
 
     useEffect(() => {
@@ -63,6 +75,30 @@ const Support = () => {
                 type: LinkType.PHONE
             }
         ])
+
+        setSale([
+            {
+                id: 1,
+                title: 'بروز بودن قیمت ها',
+                icon: <MonetizationOnOutlinedIcon className='text-[#221518]' sx={{ width: 50, height: 50 }} />,
+            }, {
+                id: 2,
+                title: 'محصول اورجینال',
+                icon: <StarBorderOutlinedIcon className='text-[#221518]' sx={{ width: 50, height: 50 }} />,
+            }, {
+                id: 3,
+                title: 'خرید مطمئن',
+                icon: <SafetyCheckOutlinedIcon className='text-[#221518]' sx={{ width: 50, height: 50 }} />,
+            }, {
+                id: 4,
+                title: 'پرداخت سریع',
+                icon: <CreditCardOutlinedIcon className='text-[#221518]' sx={{ width: 50, height: 50 }} />,
+            }, {
+                id: 5,
+                title: 'پشتیبانی 9 الی 21',
+                icon: <SupportAgentOutlinedIcon className='text-[#221518]' sx={{ width: 50, height: 50 }} />,
+            }
+        ])
     }, [])
 
     const handleClickRelationship = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -74,7 +110,7 @@ const Support = () => {
             const targetRelationship = relationship.find(item => {
                 return item.id == targetId
             })
-            if (!targetRelationship || targetRelationship == undefined || targetRelationship == null) return 
+            if (!targetRelationship || targetRelationship == undefined || targetRelationship == null) return
 
             if (targetRelationship.type == LinkType.EMAIL) {
                 openMail(targetRelationship.link)
@@ -95,7 +131,7 @@ const Support = () => {
                 <h2 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>آدرس فروش حضوری:</h2>
                 <div className='w-full mt-8 flex flex-col md:flex-row items-center justify-between gap-8'>
                     <Image //todo show map
-                        src={'/images/coffee-cup-1.png'}
+                        src={'/images/coffee-cup-5.png'}
                         width={500}
                         height={500}
                         className='w-64 sm:w-80 md:w-96 h-auto hover:brightness-110 cursor-pointer transition-all duration-150'
@@ -105,23 +141,42 @@ const Support = () => {
                         quality={100}
                     />
 
-                    <ul dir='rtl' className='w-full flex flex-col items-start justify-center gap-8'>
-                        <li className='list-disc flex gap-2 items-center justify-center text-brown-100 text-sm font-light text-ellipsis md:text-justify'>
-                            <h3 className='text-lg font-bold'>شعبه 1:</h3>
-                            <p className='text-base'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                            <h6 className=' text-sm text-yellow-300'>ساعت کاری (10 - 22)</h6>
+                    <ul dir='rtl' className='w-full flex flex-col items-center md:items-start justify-center gap-12'>
+                        <li className='list-disc flex flex-col md:flex-row gap-4 md:gap-2 items-center justify-center text-brown-100 text-sm font-light text-ellipsis md:text-justify'>
+                            <h3 className='text-center text-lg font-bold'>شعبه 1:</h3>
+                            <p className='text-center text-base'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <h6 className='text-center text-sm text-yellow-300'>ساعت کاری (10 - 22)</h6>
                         </li>
-                        <li className='list-disc flex gap-2 items-center justify-center text-brown-100 text-sm font-light text-ellipsis md:text-justify'>
-                            <h3 className='text-lg font-bold'>شعبه 2:</h3>
-                            <p className='text-base'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                            <h6 className=' text-sm text-yellow-300'>ساعت کاری (10 - 22)</h6>
+                        <li className='list-disc flex flex-col md:flex-row gap-4 md:gap-2 items-center justify-center text-brown-100 text-sm font-light text-ellipsis md:text-justify'>
+                            <h3 className='text-center text-lg font-bold'>شعبه 2:</h3>
+                            <p className='text-center text-base'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <h6 className='text-center text-sm text-yellow-300'>ساعت کاری (10 - 22)</h6>
                         </li>
-                        <li className='list-disc flex gap-2 items-center justify-center text-brown-100 text-sm font-light text-ellipsis md:text-justify'>
-                            <h3 className='text-lg font-bold'>شعبه 3:</h3>
-                            <p className='text-base'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                            <h6 className=' text-sm text-yellow-300'>ساعت کاری (10 - 22)</h6>
+                        <li className='list-disc flex flex-col md:flex-row gap-4 md:gap-2 items-center justify-center text-brown-100 text-sm font-light text-ellipsis md:text-justify'>
+                            <h3 className='text-center text-lg font-bold'>شعبه 3:</h3>
+                            <p className='text-center text-base'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <h6 className='text-center text-sm text-yellow-300'>ساعت کاری (10 - 22)</h6>
                         </li>
                     </ul>
+                </div>
+
+                <DividerCoffee />
+
+                <h2 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>فروش حضوری / آنلاین:</h2>
+                <div
+                    className={`w-full mt-8 flex flex-col md:flex-row flex-wrap items-center justify-between gap-8 px-16 py-8 bg-[url('/images/bg-0.png')] bg-no-repeat bg-cover rounded-xl`}
+                >
+                    {
+                        sale.map(item => (
+                            <div
+                                key={item.id}
+                                className='flex flex-col items-center justify-center gap-8'
+                            >
+                                {item.icon}
+                                <h4 className='text-sm md:text-base lg:text-lg font-bold line-clamp-1 text-center -mx-8 text-[#221518]'>{item.title}</h4>
+                            </div>
+                        ))
+                    }
                 </div>
 
                 <DividerCoffee />
@@ -137,7 +192,7 @@ const Support = () => {
                                 {item.icon}
                                 <h4 className='text-lg font-bold line-clamp-1 text-center -mx-8'>{item.title}</h4>
                                 <h6 className='text-base line-clamp-1 text-center -mx-8'>{item.link}</h6>
-                                <span 
+                                <span
                                     id={`relationship-${item.id}`}
                                     className='absolute top-0 right-0 left-0 bottom-0'
                                 />
