@@ -16,7 +16,7 @@ import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import SafetyCheckOutlinedIcon from '@mui/icons-material/SafetyCheckOutlined';
 import CreditCardOutlinedIcon from '@mui/icons-material/CreditCardOutlined';
 import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
-import { url } from 'inspector'
+import NeshanMap from "@neshan-maps-platform/react-openlayers"
 
 enum LinkType {
     TELEGRAM = 'telegram',
@@ -129,19 +129,18 @@ const Support = () => {
             <Header isFromMainHeader={false} />
             <div className='flex flex-col gap-8 items-center justify-center w-full px-2 sm:px-5 md:px-8 lg:px-14 xl:px-16'>
                 <h2 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>آدرس فروش حضوری:</h2>
-                <div className='w-full mt-8 flex flex-col md:flex-row items-center justify-between gap-8'>
-                    <Image //todo show map
-                        src={'/images/coffee-cup-5.png'}
-                        width={500}
-                        height={500}
-                        className='w-64 sm:w-80 md:w-96 h-auto hover:brightness-110 cursor-pointer transition-all duration-150'
-                        alt='coffee cup'
-                        priority
-                        loading='eager'
-                        quality={100}
+                <div className='w-full mt-8 flex flex-col lg:flex-row items-center justify-between gap-8'>
+                    <NeshanMap
+                        className='size-80'
+                        mapKey={process.env.NESHAN_KEY || ''}
+                        center={{ latitude: 35.7009447852995, longitude: 51.39116262864598 }}
+                        zoom={18}
+                        defaultType="neshan" //standard-night  ,  neshan  ,  osm-bright   ,  dreamy
+                        traffic={true}
+                        poi={true}
                     />
 
-                    <ul dir='rtl' className='w-full flex flex-col items-center md:items-start justify-center gap-12'>
+                    <ul dir='rtl' className='flex flex-col items-center lg:items-start justify-center gap-12'>
                         <li className='list-disc flex flex-col md:flex-row gap-4 md:gap-2 items-center justify-center text-brown-100 text-sm font-light text-ellipsis md:text-justify'>
                             <h3 className='text-center text-lg font-bold'>شعبه 1:</h3>
                             <p className='text-center text-base'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
