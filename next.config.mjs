@@ -3,7 +3,7 @@ const nextConfig = {
     output: 'standalone',
     env: {
         MY_NAME: "ArashAltafi",
-        NESHAN_KEY: "web.d43ed7896859410ab458ff1cbd87f758"
+        MAPBOX_KEY: "pk.eyJ1IjoiYWxpYWhhcmlhbjUiLCJhIjoiY2wyMWUzeGZiMTU4bjNjbWt5Zjk3NHZ6cyJ9.oPpYJC4Xxc315h6S8Tl8Ig"
     }
 };
 

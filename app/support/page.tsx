@@ -16,7 +16,8 @@ import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import SafetyCheckOutlinedIcon from '@mui/icons-material/SafetyCheckOutlined';
 import CreditCardOutlinedIcon from '@mui/icons-material/CreditCardOutlined';
 import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
-import NeshanMap from "@neshan-maps-platform/react-openlayers"
+import 'mapbox-gl/dist/mapbox-gl.css';
+import Map, { FullscreenControl, GeolocateControl, Marker, ScaleControl } from 'react-map-gl';
 
 enum LinkType {
     TELEGRAM = 'telegram',
@@ -124,21 +125,30 @@ const Support = () => {
         }
     }
 
+    const [viewState, setViewState] = React.useState({
+        latitude: 35.7009447852995,
+        longitude: 51.39116262864598,
+        zoom: 16
+    })
+
     return (
         <div className='select-none w-full flex flex-col gap-24 sm:gap-36 md:gap-48 items-center justify-start'>
             <Header isFromMainHeader={false} />
             <div className='flex flex-col gap-8 items-center justify-center w-full px-2 sm:px-5 md:px-8 lg:px-14 xl:px-16'>
                 <h2 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>آدرس فروش حضوری:</h2>
                 <div className='w-full mt-8 flex flex-col lg:flex-row items-center justify-between gap-8'>
-                    <NeshanMap
-                        className='size-80'
-                        mapKey={process.env.NESHAN_KEY || ''}
-                        center={{ latitude: 35.7009447852995, longitude: 51.39116262864598 }}
-                        zoom={18}
-                        defaultType="neshan" //standard-night  ,  neshan  ,  osm-bright   ,  dreamy
-                        traffic={true}
-                        poi={true}
-                    />
+                    <Map
+                        mapboxAccessToken={process.env.MAPBOX_KEY || ''}
+                        style={{ width: 320, height: 320, borderRadius: 14 }}
+                        {...viewState}
+                        onMove={evt => setViewState(evt.viewState)}
+                        mapStyle="mapbox://styles/mapbox/dark-v10" //dark-v10   -   streets-v9
+                        attributionControl={false}
+                    >
+                        <FullscreenControl />
+                        <GeolocateControl />
+                        <ScaleControl />
+                    </Map>
 
                     <ul dir='rtl' className='flex flex-col items-center lg:items-start justify-center gap-12'>
                         <li className='list-disc flex flex-col md:flex-row gap-4 md:gap-2 items-center justify-center text-brown-100 text-sm font-light text-ellipsis md:text-justify'>
