@@ -2,21 +2,32 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 const logo = '/images/logo.png';
 const search = '/images/search.svg';
 const user = '/images/user.svg';
 const basket = '/images/basket.svg';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded'
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+
+enum HeaderItems {
+  SHOP = '/',
+  SUPPORT = '/support',
+  CONTACT = '/contact',
+  ABOUT = '/about',
+  BLOG = '/blog'
+}
 
 interface HeaderProps {
   isFromMainHeader: boolean
 }
 
 const Header = (props: HeaderProps) => {
+  const [currentState, setCurrentState] = useState<HeaderItems>(HeaderItems.SHOP)
+
   const router = useRouter()
+  const pathName = usePathname()
 
   useEffect(() => {
     const menu = document.getElementById("menu")
@@ -26,6 +37,29 @@ const Header = (props: HeaderProps) => {
       blur.classList.add("hidden")
     }
   }, [])
+
+  useEffect(() => {
+    switch (pathName) {
+      case HeaderItems.SHOP:
+        setCurrentState(HeaderItems.SHOP)
+        break;
+      case HeaderItems.SUPPORT:
+        setCurrentState(HeaderItems.SUPPORT)
+        break;
+      case HeaderItems.CONTACT:
+        setCurrentState(HeaderItems.CONTACT)
+        break;
+      case HeaderItems.ABOUT:
+        setCurrentState(HeaderItems.ABOUT)
+        break;
+      case HeaderItems.BLOG:
+        setCurrentState(HeaderItems.BLOG)
+        break;
+      default:
+        setCurrentState(HeaderItems.SHOP)
+        break;
+    }
+  }, [pathName])
 
   // close menu on back click 
   useEffect(() => {
@@ -125,19 +159,19 @@ const Header = (props: HeaderProps) => {
         </ul>
 
         <ul className='flex gap-4 lg:gap-6 xl:gap-8 flex-row-reverse flex-1 child:text-lg child:lg:text-xl child:xl:text-2xl child:transition-all'>
-          <Link href={'/'} className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+          <Link href={'/'} className={`cursor-pointer ${currentState === HeaderItems.SHOP && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             فروشگاه
           </Link>
-          <Link href={'support'} className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+          <Link href={'support'} className={`cursor-pointer ${currentState === HeaderItems.SUPPORT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             پشتیبانی
           </Link>
-          <Link href={'contact'} className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+          <Link href={'contact'} className={`cursor-pointer ${currentState === HeaderItems.CONTACT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             ارتباط با ما
           </Link>
-          <Link href={'/about'} className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+          <Link href={'/about'} className={`cursor-pointer ${currentState === HeaderItems.ABOUT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             درباره ما
           </Link>
-          <Link href={'blog'} className='cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+          <Link href={'blog'} className={`cursor-pointer ${currentState === HeaderItems.BLOG && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             بلاگ
           </Link>
         </ul>
@@ -187,23 +221,23 @@ const Header = (props: HeaderProps) => {
         <ul
           onClick={(e) => handleClickMenuItems(e)}
           className='w-full mt-20 flex items-center justify-center flex-col child:text-lg child:lg:text-xl child:xl:text-2xl child:transition-all'>
-          <li id='menuItem-/' className='w-full py-8 text-center cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+          <li id='menuItem-/' className={`w-full py-8 text-center cursor-pointer ${currentState === HeaderItems.SHOP && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             فروشگاه
           </li>
           <span className='w-full h-px bg-brown-500 rounded-full' />
-          <li id='menuItem-support' className='w-full py-8 text-center cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+          <li id='menuItem-support' className={`w-full py-8 text-center cursor-pointer ${currentState === HeaderItems.SUPPORT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             پشتیبانی
           </li>
           <span className='w-full h-px bg-brown-500 rounded-full' />
-          <li id='menuItem-contact' className='w-full py-8 text-center cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+          <li id='menuItem-contact' className={`w-full py-8 text-center cursor-pointer ${currentState === HeaderItems.CONTACT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             ارتباط با ما
           </li>
           <span className='w-full h-px bg-brown-500 rounded-full' />
-          <li id='menuItem-about' className='w-full py-8 text-center cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+          <li id='menuItem-about' className={`w-full py-8 text-center cursor-pointer ${currentState === HeaderItems.ABOUT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             درباره ما
           </li>
           <span className='w-full h-px bg-brown-500 rounded-full' />
-          <li id='menuItem-blog' className='w-full py-8 text-center cursor-pointer hover:text-brown-300 hover:scale-105 active:scale-95'>
+          <li id='menuItem-blog' className={`w-full py-8 text-center cursor-pointer ${currentState === HeaderItems.BLOG && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             بلاگ
           </li>
         </ul>
