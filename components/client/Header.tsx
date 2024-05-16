@@ -177,6 +177,7 @@ const Header = (props: HeaderProps) => {
         </ul>
 
         <Image
+          onClick={() => router.push('/')}
           className='size-[68px] lg:size-[78px] xl:size-[88px] cursor-pointer hover:brightness-125 transition-all duration-150'
           src={logo}
           alt="logo"
