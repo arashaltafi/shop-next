@@ -24,7 +24,7 @@ interface HeaderProps {
 }
 
 const Header = (props: HeaderProps) => {
-  const [currentState, setCurrentState] = useState<HeaderItems>(HeaderItems.SHOP)
+  const [currentState, setCurrentState] = useState<HeaderItems | null>()
 
   const router = useRouter()
   const pathName = usePathname()
@@ -56,7 +56,6 @@ const Header = (props: HeaderProps) => {
         setCurrentState(HeaderItems.BLOG)
         break;
       default:
-        setCurrentState(HeaderItems.SHOP)
         break;
     }
   }, [pathName])
