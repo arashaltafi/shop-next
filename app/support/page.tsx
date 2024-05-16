@@ -17,7 +17,7 @@ import SafetyCheckOutlinedIcon from '@mui/icons-material/SafetyCheckOutlined';
 import CreditCardOutlinedIcon from '@mui/icons-material/CreditCardOutlined';
 import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import Map, { FullscreenControl, GeolocateControl, Marker, ScaleControl } from 'react-map-gl';
+import Map, { FullscreenControl, GeolocateControl, ScaleControl } from 'react-map-gl';
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
