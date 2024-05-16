@@ -153,7 +153,7 @@ const Support = () => {
     })
 
     const onSubmit: SubmitHandler<IFormInput> = (data) => {
-        alert(JSON.stringify(data, null, 2)) //todo send to server
+        alert(JSON.stringify(data, null, 2)) //TODO send to server
         reset()
     }
 
