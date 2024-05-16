@@ -1,9 +1,7 @@
-"use client"
-
 import Footer from '@/components/client/Footer'
 import Header from '@/components/client/Header'
 import Image from 'next/image'
-import React, { ReactElement, useEffect, useState } from 'react'
+import React from 'react'
 import Inventory2RoundedIcon from '@mui/icons-material/Inventory2Rounded';
 import CoffeeMakerRoundedIcon from '@mui/icons-material/CoffeeMakerRounded';
 import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
@@ -11,38 +9,29 @@ import DeliveryDiningRoundedIcon from '@mui/icons-material/DeliveryDiningRounded
 import DividerCoffee from '@/components/client/DividerCoffee'
 
 const About = () => {
-    const [items, setItems] = useState<{
-        id: number,
-        icon: ReactElement,
-        title: string,
-        description: string
-    }[]>([])
-
-    useEffect(() => {
-        setItems([
-            {
-                id: 1,
-                title: 'بسته بندی',
-                description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ',
-                icon: <Inventory2RoundedIcon sx={{ width: 50, height: 50 }} />
-            }, {
-                id: 2,
-                title: 'مواد اولیه',
-                description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ',
-                icon: <CoffeeMakerRoundedIcon sx={{ width: 50, height: 50 }} />
-            }, {
-                id: 3,
-                title: 'پشتیبانی',
-                description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ',
-                icon: <SupportAgentRoundedIcon sx={{ width: 50, height: 50 }} />
-            }, {
-                id: 4,
-                title: 'تحویل سریع',
-                description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ',
-                icon: <DeliveryDiningRoundedIcon sx={{ width: 50, height: 50 }} />
-            }
-        ])
-    }, [])
+    const items = [
+        {
+            id: 1,
+            title: 'بسته بندی',
+            description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ',
+            icon: <Inventory2RoundedIcon sx={{ width: 50, height: 50 }} />
+        }, {
+            id: 2,
+            title: 'مواد اولیه',
+            description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ',
+            icon: <CoffeeMakerRoundedIcon sx={{ width: 50, height: 50 }} />
+        }, {
+            id: 3,
+            title: 'پشتیبانی',
+            description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ',
+            icon: <SupportAgentRoundedIcon sx={{ width: 50, height: 50 }} />
+        }, {
+            id: 4,
+            title: 'تحویل سریع',
+            description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ',
+            icon: <DeliveryDiningRoundedIcon sx={{ width: 50, height: 50 }} />
+        }
+    ]
 
     return (
         <div className='select-none w-full flex flex-col gap-8 md:gap-36 lg:gap-48 items-center justify-start'>
