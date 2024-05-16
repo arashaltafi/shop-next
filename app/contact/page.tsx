@@ -13,7 +13,7 @@ const Contact = () => {
                 <h1 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>ارتباط با ما:</h1>
                 <div className='flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8'>
                     <Image
-                        src={'/images/coffee-cup-2.png'}
+                        src={'/images/bg-10.png'}
                         width={500}
                         height={500}
                         className='w-64 sm:w-80 md:w-96 h-auto hover:brightness-110 cursor-pointer transition-all duration-150'
@@ -34,7 +34,7 @@ const Contact = () => {
                 <h5 dir='rtl' className='self-end text-brown-200 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl'>خوشحال می شویم نظرات خودتان را با ما در میان بگذارید.</h5>
                 <div className='w-full flex flex-col lg:flex-row gap-8 lg:gap-x-16 items-center justify-center'>
                     <Image
-                        src={'/images/coffee-cup-5.png'}
+                        src={'/images/bg-9.png'}
                         width={500}
                         height={500}
                         className='w-2/3 sm:w-1/2 md:w-1/3 lg:w-1/3 h-auto hover:brightness-125 cursor-pointer transition-all duration-150'
