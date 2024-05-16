@@ -135,10 +135,10 @@ const Footer = () => {
                 راهنمای خرید آنلاین
               </Link>
               <Link
-                href={'/rules'}
+                href={'/questions'}
                 className='text-base font-light text-brown-200 hover:text-brown-300 transition-all'
               >
-                قوانین و مقررات
+                سوالات متداول
               </Link>
             </div>
             <div className='w-full flex flex-col items-end justify-center gap-4 child:text-center child:sm:text-end child:sm:w-auto child:w-full'>
