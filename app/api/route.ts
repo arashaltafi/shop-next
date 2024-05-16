@@ -10,10 +10,6 @@ export async function PUT() {
     return Response.json({ message: 'Welcome to Coffee Shop Online Backend!' }, { status: 200 })
 }
 
-export async function UPDATE() {
-    return Response.json({ message: 'Welcome to Coffee Shop Online Backend!' }, { status: 200 })
-}
-
 export async function DELETE() {
     return Response.json({ message: 'Welcome to Coffee Shop Online Backend!' }, { status: 200 })
 }
