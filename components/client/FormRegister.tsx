@@ -12,6 +12,7 @@ import { showToast } from '@/utils/Toast'
 type IFormInput = {
     email: string
     password: string
+    confirmPassword: string
 }
 
 const FormRegister = () => {
@@ -20,6 +21,7 @@ const FormRegister = () => {
     const schema = yup.object().shape({
         email: yup.string().email('ایمیل را صحیح وارد نمایید.').required('ایمیل را وارد نمایید.'),
         password: yup.string().required('رمز عبور را وارد نمایید.').min(4, 'رمز عبور باید بیشتر از 4 کاراکتر باشد').max(30, 'رمز عبور باید کمتر از 30 کاراکتر باشد'),
+        confirmPassword: yup.string().required('رمز عبور را وارد نمایید.').min(4, 'رمز عبور باید بیشتر از 4 کاراکتر باشد').max(30, 'رمز عبور باید کمتر از 30 کاراکتر باشد').oneOf([yup.ref('password')], 'رمز عبور با تکرار آن یکسان نیست.'),
     })
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm<IFormInput>({
@@ -28,7 +30,7 @@ const FormRegister = () => {
 
     const onSubmit: SubmitHandler<IFormInput> = (data) => {
         if (parseInt(inputCaptcha) === captcha) {
-            apiCallLogin(data.email);
+            apiCallRegister(data.email);
             reset()
         } else {
             showToast('لطفا کد امنیتی را صحیح وارد نمایید', 'error');
@@ -107,9 +109,9 @@ const FormRegister = () => {
         }
     }
 
-    const apiCallLogin = async (email: string) => {
+    const apiCallRegister = async (email: string) => {
         //TODO fetch data
-        showToast('ورود شما موفقیت آمیز بود', 'success');
+        showToast('ثبت نام شما موفقیت آمیز بود', 'success');
         router.push('/')
     }
 
@@ -128,12 +130,22 @@ const FormRegister = () => {
             <label dir='rtl' htmlFor='password' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>رمز عبور:</label>
             <input
                 id='password'
-                className='px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'
+                className='text-start placeholder:text-end px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'
                 type="password"
-                placeholder='رمز عبور ...'
+                placeholder='... رمز عبور'
                 {...register('password')}
             />
             {errors.password && <p dir='rtl' className='text-xs sm:text-sm md:text-base text-red-400'>{errors.password?.message}</p>}
+
+            <label dir='rtl' htmlFor='confirmPassword' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>تکرار رمز عبور:</label>
+            <input
+                id='confirmPassword'
+                className='text-start placeholder:text-end px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'
+                type="password"
+                placeholder='... تکرار رمز عبور'
+                {...register('confirmPassword')}
+            />
+            {errors.confirmPassword && <p dir='rtl' className='text-xs sm:text-sm md:text-base text-red-400'>{errors.confirmPassword?.message}</p>}
 
             <div className="mt-8 flex flex-col lg:flex-row gap-2 lg:gap-8 justify-center items-center pt-4">
                 <canvas

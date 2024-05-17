@@ -56,11 +56,16 @@ const Login = () => {
             <FormLogin />
           </div>
 
-          <Link
-            href={'/auth/register'}
-            className='w-2/3 mx-auto text-center mb-8 mt-16 btn btnLightBrown py-3 sm:py-4 md:py-5'>
-            ثبت نام
-          </Link>
+          <div className="w-full flex flex-row gap-4 items-center justify-center mb-8 mt-16">
+            <Link
+              href={'/auth/register'}
+              className='text-sky-500 text-lg'>
+              ثبت نام
+            </Link>
+            <p className="text-base">
+              حساب کاربری ندارید؟
+            </p>
+          </div>
         </div>
       </div>
     </>

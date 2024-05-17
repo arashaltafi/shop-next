@@ -128,9 +128,9 @@ const FormLogin = () => {
             <label dir='rtl' htmlFor='password' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>رمز عبور:</label>
             <input
                 id='password'
-                className='px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'
+                className='text-start placeholder:text-end px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'
                 type="password"
-                placeholder='رمز عبور ...'
+                placeholder='... رمز عبور'
                 {...register('password')}
             />
             {errors.password && <p dir='rtl' className='text-xs sm:text-sm md:text-base text-red-400'>{errors.password?.message}</p>}

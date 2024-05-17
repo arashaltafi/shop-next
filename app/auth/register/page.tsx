@@ -15,7 +15,7 @@ const Login = () => {
         {/* Image Section */}
         <div className="lg:block w-1/2 xl:w-1/3 shadow-2xl">
           <Image
-            className="bg-brown-900 rounded-br-2xl rounded-tr-2xl w-full h-screen hidden md:block hover:brightness-110 duration-200 cursor-pointer transition-all"
+            className="bg-brown-900 rounded-bl-2xl rounded-tl-2xl w-full h-screen hidden md:block hover:brightness-110 duration-200 cursor-pointer transition-all"
             src={bg11}
             alt="Background"
             width={1000}
@@ -57,11 +57,16 @@ const Login = () => {
             <FormRegister />
           </div>
 
-          <Link
-            href={'/auth/login'}
-            className='w-2/3 mx-auto text-center mb-8 mt-16 btn btnLightBrown py-3 sm:py-4 md:py-5'>
-            ورود
-          </Link>
+          <div className="w-full flex flex-row gap-4 items-center justify-center mb-8 mt-16">
+            <Link
+              href={'/auth/login'}
+              className='text-sky-500 text-lg'>
+              ورود
+            </Link>
+            <p className="text-base">
+              از قبل حساب کاربری دارید؟
+            </p>
+          </div>
         </div>
       </div>
     </>
