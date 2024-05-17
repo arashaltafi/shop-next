@@ -142,7 +142,7 @@ const Header = (props: HeaderProps) => {
             <Image
               className='size-8 cursor-pointer hover:scale-105 active:scale-95'
               src={basket}
-              alt="search"
+              alt="basket"
               width={100}
               height={100}
               quality={100}
@@ -154,7 +154,7 @@ const Header = (props: HeaderProps) => {
             <Image
               className='size-8 cursor-pointer hover:scale-105 active:scale-95'
               src={user}
-              alt="search"
+              alt="user"
               width={100}
               height={100}
               quality={100}
@@ -217,6 +217,20 @@ const Header = (props: HeaderProps) => {
           quality={100}
           priority
           loading='eager'
+        />
+
+        <Image
+          className='size-8 sm:size-12 cursor-pointer hover:brightness-125 absolute top-8 right-6 hover:scale-105 active:scale-95 transition-all duration-150'
+          src={basket}
+          placeholder='blur'
+          blurDataURL={basket}
+          alt="basket"
+          width={100}
+          height={100}
+          quality={100}
+          priority
+          loading='eager'
+          onClick={() => router.push('/basket')}
         />
 
         <ul
