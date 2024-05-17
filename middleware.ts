@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
-    const adminToken = request.cookies.has('admin-token')
-    const userToken = request.cookies.has('token')
+    const adminToken = request.cookies.has(process.env.ADMIN_TOKEN || '')
+    const userToken = request.cookies.has(process.env.TOKEN || '')
 
     if (request.nextUrl.pathname.startsWith('/admin/auth')) {
         if (adminToken) {
