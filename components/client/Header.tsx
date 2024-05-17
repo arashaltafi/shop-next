@@ -136,6 +136,7 @@ const Header = (props: HeaderProps) => {
               quality={100}
               priority
               loading='eager'
+              onClick={() => router.push('/search')}
             />
           </li>
           <li>
@@ -148,6 +149,7 @@ const Header = (props: HeaderProps) => {
               quality={100}
               priority
               loading='eager'
+              onClick={() => router.push('/basket')}
             />
           </li>
           <li>
@@ -160,6 +162,7 @@ const Header = (props: HeaderProps) => {
               quality={100}
               priority
               loading='eager'
+              onClick={() => router.push('/profile')}
             />
           </li>
         </ul>
