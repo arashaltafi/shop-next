@@ -31,8 +31,9 @@ const FormContact = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className='w-full flex flex-col gap-4' autoComplete='off'>
-            <label dir='rtl' className='text-lg sm:text-xl text-brown-100'>نام:</label>
+            <label dir='rtl' htmlFor='name' className='text-lg sm:text-xl text-brown-100'>نام:</label>
             <input
+                id='name'
                 dir='rtl'
                 className='px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'
                 type="text"
@@ -41,8 +42,9 @@ const FormContact = () => {
             />
             {errors.name && <p className='text-xs sm:text-sm md:text-base text-red-400'>{errors.name?.message}</p>}
 
-            <label dir='rtl' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>ایمیل:</label>
+            <label dir='rtl' htmlFor='email' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>ایمیل:</label>
             <input
+                id='email'
                 className='text-start placeholder:text-end px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'
                 type="email"
                 placeholder='... ایمیل'
@@ -50,8 +52,9 @@ const FormContact = () => {
             />
             {errors.email && <p className='text-xs sm:text-sm md:text-base text-red-400'>{errors.email?.message}</p>}
 
-            <label dir='rtl' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>عنوان:</label>
+            <label dir='rtl' htmlFor='title' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>عنوان:</label>
             <input
+                id='title'
                 dir='rtl'
                 className='px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'
                 type="text"
@@ -60,8 +63,9 @@ const FormContact = () => {
             />
             {errors.title && <p className='text-xs sm:text-sm md:text-base text-red-400'>{errors.title?.message}</p>}
 
-            <label dir='rtl' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>متن پیام:</label>
+            <label dir='rtl' htmlFor='description' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>متن پیام:</label>
             <textarea
+                id='description'
                 dir='rtl'
                 className='px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200 resize-none'
                 rows={4}

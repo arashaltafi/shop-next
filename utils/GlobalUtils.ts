@@ -40,9 +40,39 @@ const getDeviceSize = (): string => {
     return 'xl';
 }
 
+const generateRandomNumber = (): number => {
+    const randomNumber = Math.floor(Math.random() * 10000000); // Generates a random 4-digit number
+    if (randomNumber < 1000 || randomNumber > 9999) {
+        return generateRandomNumber();
+    } else {
+        return randomNumber
+    }
+}
+
+const convertToEnglish = (value: string): string => {
+    // Define a mapping of Persian to English numbers
+    const persianToEnglishMap: { [key: string]: string } = {
+        '۰': '0',
+        '۱': '1',
+        '۲': '2',
+        '۳': '3',
+        '۴': '4',
+        '۵': '5',
+        '۶': '6',
+        '۷': '7',
+        '۸': '8',
+        '۹': '9'
+    };
+
+    // Replace Persian numbers with English numbers using the mapping
+    return value.replace(/[۰-۹]/g, (matched) => persianToEnglishMap[matched]);
+};
+
 export {
     openLink,
     openMail,
     openPhone,
-    getDeviceSize
+    getDeviceSize,
+    generateRandomNumber,
+    convertToEnglish
 }
