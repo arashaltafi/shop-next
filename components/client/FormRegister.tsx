@@ -10,18 +10,30 @@ import { useRouter } from 'next/navigation'
 import { showToast } from '@/utils/Toast'
 
 type IFormInput = {
+    firstName: string
+    lastName: string
     email: string
     password: string
     confirmPassword: string
+    gender: GenderEnum
+}
+
+enum GenderEnum {
+    female = "زن",
+    male = "مرد",
+    other = "سایر",
 }
 
 const FormRegister = () => {
     const router = useRouter();
 
     const schema = yup.object().shape({
+        firstName: yup.string().required('نام را وارد نمایید.').min(2, 'نام باید بیشتر از 2 کاراکتر باشد').max(10, 'نام باید کمتر از 10 کاراکتر باشد'),
+        lastName: yup.string().required('نام خانوادگی را وارد نمایید.').min(3, 'نام خانوادگی باید بیشتر از 3 کاراکتر باشد').max(15, 'نام خانوادگی باید کمتر از 15 کاراکتر باشد'),
         email: yup.string().email('ایمیل را صحیح وارد نمایید.').required('ایمیل را وارد نمایید.'),
         password: yup.string().required('رمز عبور را وارد نمایید.').min(4, 'رمز عبور باید بیشتر از 4 کاراکتر باشد').max(30, 'رمز عبور باید کمتر از 30 کاراکتر باشد'),
         confirmPassword: yup.string().required('رمز عبور را وارد نمایید.').min(4, 'رمز عبور باید بیشتر از 4 کاراکتر باشد').max(30, 'رمز عبور باید کمتر از 30 کاراکتر باشد').oneOf([yup.ref('password')], 'رمز عبور با تکرار آن یکسان نیست.'),
+        gender: yup.mixed<GenderEnum>().oneOf([GenderEnum.female, GenderEnum.male, GenderEnum.other], 'جنسیت را وارد نمایید.').required('جنسیت را وارد نمایید.')
     })
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm<IFormInput>({
@@ -117,6 +129,28 @@ const FormRegister = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className='mt-8 w-full flex flex-col gap-4' autoComplete='off'>
+            <label dir='rtl' htmlFor='firstName' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>نام:</label>
+            <input
+                id='firstName'
+                dir='rtl'
+                className='px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'
+                type="text"
+                placeholder='نام ...'
+                {...register('firstName')}
+            />
+            {errors.firstName && <p dir='rtl' className='text-xs sm:text-sm md:text-base text-red-400'>{errors.firstName?.message}</p>}
+
+            <label dir='rtl' htmlFor='lastName' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>نام خانوادگی:</label>
+            <input
+                id='lastName'
+                dir='rtl'
+                className='px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'
+                type="text"
+                placeholder='نام خانوادگی ...'
+                {...register('lastName')}
+            />
+            {errors.lastName && <p dir='rtl' className='text-xs sm:text-sm md:text-base text-red-400'>{errors.lastName?.message}</p>}
+
             <label dir='rtl' htmlFor='email' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>ایمیل:</label>
             <input
                 id='email'
@@ -146,6 +180,16 @@ const FormRegister = () => {
                 {...register('confirmPassword')}
             />
             {errors.confirmPassword && <p dir='rtl' className='text-xs sm:text-sm md:text-base text-red-400'>{errors.confirmPassword?.message}</p>}
+
+            <label dir='rtl' htmlFor='gender' className='mt-2 sm:mt-4 text-lg sm:text-xl text-brown-100'>جنسیت:</label>
+            <select dir='rtl' {...register("gender")} className='px-2 sm:px-4 md:px-6 lg:px-8 py-4 text-white bg-brown-800 rounded-lg text-base sm:text-lg placeholder:text-brown-200'>
+                <option selected disabled hidden className='text-white' value="">لطفا انتخاب کنید</option>
+                <option className='text-white' value={GenderEnum.female}>مرد</option>
+                <option className='text-white' value={GenderEnum.male}>زن</option>
+                <option className='text-white' value={GenderEnum.other}>سایر</option>
+            </select>
+            {errors.gender && <p dir='rtl' className='text-xs sm:text-sm md:text-base text-red-400'>{errors.gender?.message}</p>}
+
 
             <div className="mt-8 flex flex-col lg:flex-row gap-2 lg:gap-8 justify-center items-center pt-4">
                 <canvas
