@@ -1,8 +1,10 @@
-import React from 'react'
+import BounceLoader from 'react-spinners/BounceLoader'
 
 const loading = () => {
     return (
-        <div>loading ...</div>
+        <div className='w-full h-screen flex items-center justify-center'>
+            <BounceLoader color="#bfa094" />
+        </div>
     )
 }
 
