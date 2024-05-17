@@ -21,6 +21,12 @@ enum HeaderItems {
   BLOG = '/blog'
 }
 
+enum HeaderMenu {
+  PROFILE = '/profile',
+  BASKET = '/basket',
+  SEARCH = '/search'
+}
+
 interface HeaderProps {
   isFromMainHeader: boolean
 }
@@ -122,6 +128,22 @@ const Header = (props: HeaderProps) => {
     }
   }
 
+  const handleClickTopMenu = (href: HeaderMenu) => {
+    switch (href) {
+      case HeaderMenu.BASKET:
+        router.push(href)
+        break;
+      case HeaderMenu.SEARCH:
+        router.push(href)
+        break;
+      case HeaderMenu.PROFILE:
+        router.push(isHaveToken ? href : '/auth/login')
+        break;
+      default:
+        break;
+    }
+  }
+
   return (
     <div className={`relative ${props.isFromMainHeader == false && 'w-full'}`}>
       <header className='hidden md:flex fixed top-4 left-8 right-8 z-50 flex-row items-center justify-center gap-8 lg:gap-10 xl:gap-12 select-none backdrop-filter py-[1px] px-4 bg-brown-900/50 rounded-3xl backdrop-blur-[5px]'>
@@ -136,7 +158,7 @@ const Header = (props: HeaderProps) => {
               quality={100}
               priority
               loading='eager'
-              onClick={() => router.push('/search')}
+              onClick={() => handleClickTopMenu(HeaderMenu.SEARCH)}
             />
           </li>
           <li>
@@ -149,7 +171,7 @@ const Header = (props: HeaderProps) => {
               quality={100}
               priority
               loading='eager'
-              onClick={() => router.push('/basket')}
+              onClick={() => handleClickTopMenu(HeaderMenu.BASKET)}
             />
           </li>
           <li>
@@ -162,7 +184,7 @@ const Header = (props: HeaderProps) => {
               quality={100}
               priority
               loading='eager'
-              onClick={() => router.push('/profile')}
+              onClick={() => handleClickTopMenu(HeaderMenu.PROFILE)}
             />
           </li>
         </ul>
