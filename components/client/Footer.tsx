@@ -51,7 +51,7 @@ const Footer = () => {
   }
 
   return (
-    <div className='relative select-none w-full flex flex-col items-center justify-between gap-8 px-2 sm:px-6 md:px-8 lg:px-14 xl:px-16 pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-4'>
+    <div className='relative select-none w-full flex flex-col items-center justify-between gap-8 px-2 sm:px-6 md:px-8 lg:px-14 xl:px-16 pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-4 mb-14 md:mb-0'>
       <Image
         className='absolute inset-0 size-full bg-gradient-to-r from-[10%] to-[90%] from-brown-900 to-transparent border-t border-solid border-brown-400 -z-10'
         src={bgFooter}

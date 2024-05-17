@@ -10,6 +10,7 @@ import Comments from './Comments'
 import Services from './Services'
 import Menu from './Menu'
 import Footer from './Footer'
+import BottomBar from './BottomBar'
 
 const LandingPage = () => {
   return (
@@ -26,6 +27,7 @@ const LandingPage = () => {
         <Menu />
         <Services />
         <Footer />
+        <BottomBar />
       </Suspense>
     </div>
   )

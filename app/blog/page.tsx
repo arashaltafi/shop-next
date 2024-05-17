@@ -3,6 +3,7 @@ import Footer from '@/components/client/Footer'
 import Header from '@/components/client/Header'
 import Image from 'next/image'
 import DividerCoffee from '@/components/client/DividerCoffee'
+import BottomBar from '@/components/client/BottomBar'
 const coffeeBeans6 = '/images/coffee-beans-6.png'
 const coffeeBeans7 = '/images/coffee-beans-7.png'
 const coffeeBeans8 = '/images/coffee-beans-8.png'
@@ -233,6 +234,7 @@ const Blog = () => {
                     </ul>
                 </div>
             </div>
+            <BottomBar />
             <Footer />
         </div>
     )
