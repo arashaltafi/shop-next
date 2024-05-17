@@ -8,10 +8,12 @@ const search = '/images/search.svg';
 const user = '/images/user.svg';
 const basket = '/images/basket.svg';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
-import CancelRoundedIcon from '@mui/icons-material/CancelRounded'
 import { usePathname, useRouter } from 'next/navigation';
+import { hasCookie } from '@/utils/Cookie';
 
 enum HeaderItems {
+  LOGIN = '/login',
+  PROFILE = '/profile',
   SHOP = '/',
   SUPPORT = '/support',
   CONTACT = '/contact',
@@ -25,9 +27,14 @@ interface HeaderProps {
 
 const Header = (props: HeaderProps) => {
   const [currentState, setCurrentState] = useState<HeaderItems | null>()
+  const [isHaveToken, setIsHaveToken] = useState<boolean>(false)
 
   const router = useRouter()
   const pathName = usePathname()
+
+  useEffect(() => {
+    setIsHaveToken(hasCookie(process.env.TOKEN))
+  }, [])
 
   useEffect(() => {
     const menu = document.getElementById("menu")
@@ -198,12 +205,6 @@ const Header = (props: HeaderProps) => {
         id='menu'
         className='z-50 fixed top-0 left-0 bottom-0 w-3/4 flex flex-col items-center justify-start bg-brown-900/95 md:hidden transition-all duration-300 -translate-x-[1000px]'>
 
-        <div
-          onClick={handleBlur}
-          className='absolute bottom-4 cursor-pointer hover:scale-105 active:scale-95 transition-all duration-150'>
-          <CancelRoundedIcon />
-        </div>
-
         <Image
           onClick={handleBlur}
           className='size-16 sm:size-20 cursor-pointer hover:brightness-125 absolute top-4 left-4 hover:scale-105 active:scale-95 transition-all duration-150'
@@ -220,7 +221,14 @@ const Header = (props: HeaderProps) => {
 
         <ul
           onClick={(e) => handleClickMenuItems(e)}
-          className='w-full mt-20 flex items-center justify-center flex-col child:text-lg child:lg:text-xl child:xl:text-2xl child:transition-all'>
+          className='w-full mt-20 menu overflow-y-auto flex items-center justify-center flex-col child:text-lg child:lg:text-xl child:xl:text-2xl child:transition-all'>
+          <li id='menuItem-auth/login' className={`${isHaveToken ? 'hidden' : 'block'} w-full py-8 text-center cursor-pointer ${currentState === HeaderItems.LOGIN && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
+            ورود / ثبت نام
+          </li>
+          <li id='menuItem-profile' className={`${isHaveToken ? 'block' : 'hidden'} w-full py-8 text-center cursor-pointer ${currentState === HeaderItems.PROFILE && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
+            پروفایل
+          </li>
+          <span className='w-full h-px bg-brown-500 rounded-full' />
           <li id='menuItem-/' className={`w-full py-8 text-center cursor-pointer ${currentState === HeaderItems.SHOP && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             فروشگاه
           </li>
