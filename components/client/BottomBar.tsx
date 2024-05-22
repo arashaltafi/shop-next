@@ -1,12 +1,13 @@
 "use client"
 
-import { BottomNavigation, BottomNavigationAction } from '@mui/material'
+import { Badge, BottomNavigation, BottomNavigationAction } from '@mui/material'
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import CoffeeMakerOutlinedIcon from '@mui/icons-material/CoffeeMakerOutlined';
+import { useAppSelector } from '@/libs/hooks';
 
 const BottomBar = () => {
     const [page, setPage] = useState(0);
@@ -54,6 +55,8 @@ const BottomBar = () => {
         }
     };
 
+    const localStorageCount = useAppSelector((state) => state.productSlice.productCount)
+
     const [bottomAction, setBottomAction] = useState<{
         label: string;
         value: number;
@@ -70,7 +73,13 @@ const BottomBar = () => {
                 }, {
                     label: "سبد خرید",
                     value: 1,
-                    icon: <ShoppingCartOutlinedIcon />
+                    icon: <Badge
+                        color="success"
+                        badgeContent={localStorageCount}
+                        max={99}
+                        variant='standard'>
+                        <ShoppingCartOutlinedIcon />
+                    </Badge>
                 }, {
                     label: "بلاگ",
                     value: 2,
@@ -83,7 +92,7 @@ const BottomBar = () => {
                 }
             ]
         );
-    }, []);
+    }, [localStorageCount]);
 
     return (
         <BottomNavigation
