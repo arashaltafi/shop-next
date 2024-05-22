@@ -93,7 +93,7 @@ const BestSellers = () => {
     }
 
     const handleClickMore = () => {
-        router.push('/category/allBestSellers')
+        router.push('/category/پرفروش ترین ها')
     }
 
     return (

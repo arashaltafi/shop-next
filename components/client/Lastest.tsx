@@ -93,7 +93,7 @@ const Lastest = () => {
     }
 
     const handleClickMore = () => {
-        router.push('/category/allLastest')
+        router.push('/category/آخرین ها')
     }
 
     return (
