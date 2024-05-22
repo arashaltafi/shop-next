@@ -193,16 +193,16 @@ const Header = (props: HeaderProps) => {
           <Link href={'/'} className={`cursor-pointer ${currentState === HeaderItems.SHOP && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             فروشگاه
           </Link>
-          <Link href={'support'} className={`cursor-pointer ${currentState === HeaderItems.SUPPORT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
+          <Link href={'/support'} className={`cursor-pointer ${currentState === HeaderItems.SUPPORT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             پشتیبانی
           </Link>
-          <Link href={'contact'} className={`cursor-pointer ${currentState === HeaderItems.CONTACT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
+          <Link href={'/contact'} className={`cursor-pointer ${currentState === HeaderItems.CONTACT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             ارتباط با ما
           </Link>
           <Link href={'/about'} className={`cursor-pointer ${currentState === HeaderItems.ABOUT && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             درباره ما
           </Link>
-          <Link href={'blog'} className={`cursor-pointer ${currentState === HeaderItems.BLOG && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
+          <Link href={'/blog'} className={`cursor-pointer ${currentState === HeaderItems.BLOG && 'text-brown-400 underline'} hover:text-brown-300 hover:scale-105 active:scale-95`}>
             بلاگ
           </Link>
         </ul>
