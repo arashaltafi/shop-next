@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react'
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import Tilt from 'react-parallax-tilt';
 import { getDeviceSize } from '@/utils/GlobalUtils';
+import { useRouter } from 'next/navigation';
 const product1 = '/images/p1.png';
 const product2 = '/images/p2.png';
 const product3 = '/images/p3.png';
@@ -16,6 +17,8 @@ const product7 = '/images/p7.png';
 const product8 = '/images/p8.png';
 
 const BestSellers = () => {
+    const router = useRouter()
+
     const [products, setProducts] = useState<{
         id: number, name: string, description: string, image: string, price: number
     }[]>([])
@@ -90,7 +93,7 @@ const BestSellers = () => {
     }
 
     const handleClickMore = () => {
-        console.log('handleClickMore')
+        router.push('/category/allBestSellers')
     }
 
     return (

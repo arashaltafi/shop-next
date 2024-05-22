@@ -28,11 +28,16 @@ export function middleware(request: NextRequest) {
             return NextResponse.redirect(new URL('/auth/login', request.url))
         }
     }
+
+    if (request.nextUrl.pathname.startsWith('/category')) {
+        return NextResponse.redirect(new URL('/', request.url))
+    }
 }
 
 export const config = {
     matcher: [
         '/admin/:path*',
-        '/'
+        '/',
+        '/category',
     ]
 }
