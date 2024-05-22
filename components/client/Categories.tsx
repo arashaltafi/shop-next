@@ -66,6 +66,7 @@ const Categories = () => {
                 {
                     category.map((item) => (
                         <div
+                            id={`category-${item.title}`}
                             key={item.id}
                             className='relative flex flex-col gap-4 items-center justify-center group transition-all cursor-pointer hover:scale-[101%] active:scale-[99%]'>
                             <Tilt
@@ -82,6 +83,7 @@ const Categories = () => {
                                 glareColor={'#221518'}
                             >
                                 <Image
+                                    id={`category-${item.title}`}
                                     className='size-32 sm:size-36 md:size-40 lg:size-44 xl:size-48 group-hover:brightness-110 transition-all overflow-hidden'
                                     src={item.image}
                                     alt={item.title}
@@ -91,11 +93,9 @@ const Categories = () => {
                                     loading='lazy'
                                 />
                             </Tilt>
-                            <h6 className='text-sm md:text-base lg:text-lg xl:text-xl text-brown-100 group-hover:brightness-110 transition-all font-light text-nowrap text-ellipsis line-clamp-1 text-center'>
+                            <h6 id={`category-${item.title}`} className='text-sm md:text-base lg:text-lg xl:text-xl text-brown-100 group-hover:brightness-110 transition-all font-light text-nowrap text-ellipsis line-clamp-1 text-center'>
                                 {item.title}
                             </h6>
-
-                            <span id={`category-${item.title}`} className='absolute top-0 right-0 left-0 bottom-0' />
                         </div>
                     ))
                 }
