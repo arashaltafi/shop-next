@@ -1,6 +1,6 @@
 "use client"
 
-import { convertPrice } from '@/utils/Product';
+import { addProductToStorage, convertPrice } from '@/utils/Product';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
@@ -20,55 +20,63 @@ const Lastest = () => {
     const router = useRouter()
 
     const [products, setProducts] = useState<{
-        id: number, name: string, description: string, image: string, price: number
+        id: number, productId: number, name: string, description: string, image: string, price: number
     }[]>([])
 
     useEffect(() => {
         setProducts([
             {
                 id: 1,
+                productId: 1001,
                 name: 'قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی',
                 description: '20 - 80',
                 image: product1,
                 price: 50000
             }, {
                 id: 2,
+                productId: 1002,
                 name: 'قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی',
                 description: '50 - 50',
                 image: product2,
                 price: 85000
             }, {
                 id: 3,
+                productId: 1003,
                 name: 'قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی',
                 description: '60 - 40',
                 image: product3,
                 price: 48000
             }, {
                 id: 4,
+                productId: 1004,
                 name: 'قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی',
                 description: '70 - 30',
                 image: product4,
                 price: 25000
             }, {
                 id: 5,
+                productId: 1005,
                 name: 'قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی',
                 description: '20 - 80',
                 image: product5,
                 price: 36000
             }, {
                 id: 6,
+                productId: 1006,
                 name: 'قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی',
                 description: '10 - 90',
                 image: product6,
                 price: 44000
             }, {
                 id: 7,
+                productId: 1007,
                 name: 'قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی',
                 description: '10 - 90',
                 image: product7,
                 price: 84000
             }, {
                 id: 8,
+                productId: 1008,
                 name: 'قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی',
                 description: '10 - 90',
                 image: product8,
@@ -86,7 +94,7 @@ const Lastest = () => {
             console.log('product clicked:', targetId)
         } else if (target.id.includes('order')) {
             const targetId = parseInt(target.id.replace('order-', '')) || 0
-            console.log('order clicked:', targetId)
+            addProductToStorage(targetId)
         } else {
             return
         }
@@ -166,11 +174,11 @@ const Lastest = () => {
                                     </div>
                                 </div>
 
-                                <div id={`order-${product.id}`} className='hidden sm:block z-40 text-base absolute -bottom-7 lg:-bottom-8 px-4 lg:px-5 py-2 md:py-2.5 lg:py-3 bg-brown-600 text-brown-200 drop-shadow-md rounded-xl hover:bg-green-500 hover:scale-[101%] active:scale-[99%]'>
+                                <div id={`order-${product.productId}`} className='hidden sm:block z-40 text-base absolute -bottom-7 lg:-bottom-8 px-4 lg:px-5 py-2 md:py-2.5 lg:py-3 bg-brown-600 text-brown-200 drop-shadow-md rounded-xl hover:bg-green-500 hover:scale-[101%] active:scale-[99%]'>
                                     سفارش
                                 </div>
 
-                                <span id={`product-${product.id}`} className='hidden sm:block z-30 absolute inset-0' />
+                                <span id={`product-${product.productId}`} className='hidden sm:block z-30 absolute inset-0' />
                             </div>
                         </Tilt>
                     ))

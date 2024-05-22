@@ -3,12 +3,12 @@ import Footer from '@/components/client/Footer'
 import Header from '@/components/client/Header'
 import { notFound, redirect } from 'next/navigation'
 import React from 'react'
-import CategoryItems from '@/components/client/categoryItems';
+import CategoryItems from '@/components/client/CategoryItems';
 
 type Product = {
     title: string,
     list: {
-        id: number, name: string, description: string, image: string, price: number
+        id: number, productId: number, name: string, description: string, image: string, price: number
     }[]
 }
 

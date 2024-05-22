@@ -27,6 +27,7 @@ const pwa = withPWAInit({
 const nextConfig = {
     output: 'standalone',
     env: {
+        BASKET_STORAGE: "basket",
         MY_NAME: "ArashAltafi",
         MAPBOX_KEY: "pk.eyJ1IjoiYWxpYWhhcmlhbjUiLCJhIjoiY2wyMWUzeGZiMTU4bjNjbWt5Zjk3NHZ6cyJ9.oPpYJC4Xxc315h6S8Tl8Ig",
         TOKEN: "shop-token",

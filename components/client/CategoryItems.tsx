@@ -1,6 +1,6 @@
 "use client"
 
-import { convertPrice } from '@/utils/Product';
+import { addProductToStorage, convertPrice } from '@/utils/Product';
 import Image from 'next/image';
 import Tilt from 'react-parallax-tilt';
 import { getDeviceSize } from '@/utils/GlobalUtils';
@@ -8,7 +8,7 @@ import React from 'react'
 
 interface CategoryItemsProps {
     response: {
-        id: number, name: string, description: string, image: string, price: number
+        id: number, productId: number, name: string, description: string, image: string, price: number
     }[]
 }
 
@@ -23,7 +23,7 @@ const CategoryItems = (props: CategoryItemsProps) => {
             console.log('product clicked:', targetId)
         } else if (target.id.includes('order')) {
             const targetId = parseInt(target.id.replace('order-', '')) || 0
-            console.log('order clicked:', targetId)
+            addProductToStorage(targetId)
         } else {
             return
         }
@@ -82,12 +82,12 @@ const CategoryItems = (props: CategoryItemsProps) => {
                                         <span className='fontMorvarid'>{convertPrice(50000)}</span> تومان
                                     </h5>
                                 </div>
-                                <div id={`order-${product.id}`} className='block sm:hidden text-sm px-3 py-1.5 bg-brown-600 text-brown-200 drop-shadow-md rounded-md hover:bg-green-500'>
+                                <div id={`order-${product.productId}`} className='block sm:hidden text-sm px-3 py-1.5 bg-brown-600 text-brown-200 drop-shadow-md rounded-md hover:bg-green-500'>
                                     سفارش
                                 </div>
                             </div>
 
-                            <div id={`order-${product.id}`} className='hidden sm:block z-40 text-base absolute -bottom-7 lg:-bottom-8 px-4 lg:px-5 py-2 md:py-2.5 lg:py-3 bg-brown-600 text-brown-200 drop-shadow-md rounded-xl hover:bg-green-500 hover:scale-[101%] active:scale-[99%]'>
+                            <div id={`order-${product.productId}`} className='hidden sm:block z-40 text-base absolute -bottom-7 lg:-bottom-8 px-4 lg:px-5 py-2 md:py-2.5 lg:py-3 bg-brown-600 text-brown-200 drop-shadow-md rounded-xl hover:bg-green-500 hover:scale-[101%] active:scale-[99%]'>
                                 سفارش
                             </div>
 
