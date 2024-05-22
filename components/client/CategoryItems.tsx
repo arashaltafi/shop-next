@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Tilt from 'react-parallax-tilt';
 import { getDeviceSize } from '@/utils/GlobalUtils';
 import React from 'react'
+import { useAppDispatch } from '@/libs/hooks';
+import { addProductCount } from '@/libs/features/productSlice'
 
 interface CategoryItemsProps {
     response: {
@@ -13,6 +15,7 @@ interface CategoryItemsProps {
 }
 
 const CategoryItems = (props: CategoryItemsProps) => {
+    const dispatch = useAppDispatch()
 
     const handleClickProduct = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const target = e.target as HTMLDivElement
@@ -24,6 +27,7 @@ const CategoryItems = (props: CategoryItemsProps) => {
         } else if (target.id.includes('order')) {
             const targetId = parseInt(target.id.replace('order-', '')) || 0
             addProductToStorage(targetId)
+            dispatch(addProductCount())
         } else {
             return
         }

@@ -28,7 +28,23 @@ const addProductToStorage = (targetId: number) => {
     }
 }
 
+const getProductStorageCount = (): number => {
+    const basketStorageKey = process.env.BASKET_STORAGE || ''
+    const basketStorage = localStorage.getItem(basketStorageKey)
+    let storedCount = 0
+
+    if (basketStorage === null || basketStorage === undefined) {
+        return storedCount
+    } else {
+        JSON.parse(basketStorage).forEach((item: { quantity: number }) => {
+            storedCount += item.quantity
+        })
+        return storedCount
+    }
+}
+
 export {
     convertPrice,
-    addProductToStorage
+    addProductToStorage,
+    getProductStorageCount
 }

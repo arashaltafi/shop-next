@@ -7,6 +7,8 @@ import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftR
 import Tilt from 'react-parallax-tilt';
 import { getDeviceSize } from '@/utils/GlobalUtils';
 import { useRouter } from 'next/navigation';
+import { useAppDispatch } from '@/libs/hooks';
+import { addProductCount } from '@/libs/features/productSlice'
 const product1 = '/images/p1.png';
 const product2 = '/images/p2.png';
 const product3 = '/images/p3.png';
@@ -18,6 +20,7 @@ const product8 = '/images/p8.png';
 
 const BestSellers = () => {
     const router = useRouter()
+    const dispatch = useAppDispatch()
 
     const [products, setProducts] = useState<{
         id: number, productId: number, name: string, description: string, image: string, price: number
@@ -95,6 +98,7 @@ const BestSellers = () => {
         } else if (target.id.includes('order')) {
             const targetId = parseInt(target.id.replace('order-', '')) || 0
             addProductToStorage(targetId)
+            dispatch(addProductCount())
         } else {
             return
         }

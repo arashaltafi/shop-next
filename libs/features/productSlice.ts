@@ -1,3 +1,4 @@
+import { getProductStorageCount } from '@/utils/Product';
 import { createSlice } from '@reduxjs/toolkit';
 
 interface CounterState {
@@ -13,7 +14,7 @@ const productSlice = createSlice({
     initialState,
     reducers: {
         addProductCount: (state) => {
-            state.productCount = state.productCount + 1;
+            state.productCount = getProductStorageCount();
         }
     }
 });

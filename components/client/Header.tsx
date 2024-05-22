@@ -10,6 +10,9 @@ const basket = '/images/basket.svg';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 import { usePathname, useRouter } from 'next/navigation';
 import { hasCookie } from '@/utils/Cookie';
+import { Badge } from '@mui/material';
+import { useAppSelector, useAppDispatch } from '@/libs/hooks';
+import { addProductCount } from '@/libs/features/productSlice';
 
 enum HeaderItems {
   LOGIN = '/login',
@@ -144,6 +147,13 @@ const Header = (props: HeaderProps) => {
     }
   }
 
+  const localStorageCount = useAppSelector((state) => state.productSlice.productCount)
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(addProductCount())
+  }, [])
+
   return (
     <div className={`relative ${props.isFromMainHeader == false && 'w-full'}`}>
       <header className='hidden md:flex fixed top-4 left-8 right-8 z-50 flex-row items-center justify-center gap-8 lg:gap-10 xl:gap-12 select-none backdrop-filter py-[1px] px-4 bg-brown-900/50 rounded-3xl backdrop-blur-[5px]'>
@@ -162,17 +172,23 @@ const Header = (props: HeaderProps) => {
             />
           </li>
           <li>
-            <Image
-              className='size-8 cursor-pointer hover:scale-105 active:scale-95'
-              src={basket}
-              alt="basket"
-              width={100}
-              height={100}
-              quality={100}
-              priority
-              loading='eager'
-              onClick={() => handleClickTopMenu(HeaderMenu.BASKET)}
-            />
+            <Badge
+              color="success"
+              badgeContent={localStorageCount}
+              max={99}
+              variant='standard'>
+              <Image
+                className='size-8 cursor-pointer hover:scale-105 active:scale-95'
+                src={basket}
+                alt="basket"
+                width={100}
+                height={100}
+                quality={100}
+                priority
+                loading='eager'
+                onClick={() => handleClickTopMenu(HeaderMenu.BASKET)}
+              />
+            </Badge>
           </li>
           <li>
             <Image
@@ -244,19 +260,27 @@ const Header = (props: HeaderProps) => {
           loading='eager'
         />
 
-        <Image
-          className='size-8 sm:size-12 cursor-pointer hover:brightness-125 absolute top-8 right-6 hover:scale-105 active:scale-95 transition-all duration-150'
-          src={basket}
-          placeholder='blur'
-          blurDataURL={basket}
-          alt="basket"
-          width={100}
-          height={100}
-          quality={100}
-          priority
-          loading='eager'
-          onClick={() => router.push('/basket')}
-        />
+        <div className=' absolute top-8 right-6'>
+          <Badge
+            color="success"
+            badgeContent={localStorageCount}
+            max={99}
+            variant='standard'>
+            <Image
+              className='size-8 sm:size-12 cursor-pointer hover:brightness-125 hover:scale-105 active:scale-95 transition-all duration-150'
+              src={basket}
+              placeholder='blur'
+              blurDataURL={basket}
+              alt="basket"
+              width={100}
+              height={100}
+              quality={100}
+              priority
+              loading='eager'
+              onClick={() => router.push('/basket')}
+            />
+          </Badge>
+        </div>
 
         <ul
           onClick={(e) => handleClickMenuItems(e)}
