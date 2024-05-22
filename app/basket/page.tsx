@@ -1,9 +1,34 @@
+"use client"
+
 import BottomBar from '@/components/client/BottomBar'
 import Footer from '@/components/client/Footer'
 import Header from '@/components/client/Header'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Basket = () => {
+    const [basketProduct, setBasketProduct] = useState<{
+        // id: number, productId: number, name: string, description: string, image: string, price: number, quantity: number
+        id: number, productId: number, quantity: number
+    }[]>([])
+
+    useEffect(() => {
+        //TODO call api POST { productId: number, quantity: number } and return { id: number, productId: number, name: string, description: string, image: string, price: number, quantity: number } from server
+        const basket = localStorage.getItem('basket')
+        if (basket) {
+            setBasketProduct(
+                JSON.parse(basket).map((product: any, index: number) => ({
+                    id: index + 1,
+                    ...product
+                }))
+            )
+        }
+    }, [])
+
+
+    useEffect(() => {
+        console.log(basketProduct)
+    }, [basketProduct])
+
     return (
         <div className='w-full flex flex-col gap-8 md:gap-36 lg:gap-48 items-center justify-start'>
             <Header isFromMainHeader={false} />
@@ -11,10 +36,18 @@ const Basket = () => {
                 <h1 dir='rtl' className='self-end text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl fontMorvarid'>
                     سبد خرید
                 </h1>
-                <p> </p>
-                <p> </p>
-                <p> </p>
-                <p> </p>
+                <div>
+                    {
+                        basketProduct?.map((product) => (
+                            <div key={product.id}>
+                                <div>
+                                    <h1>{product.productId}</h1>
+                                    <h1>{product.quantity}</h1>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
             <BottomBar />
             <Footer />
