@@ -1,5 +1,6 @@
 const convertPrice = (price: number) => {
-    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return price.toLocaleString('fa-IR')
+    // return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 const addProductToStorage = (targetId: number) => {
