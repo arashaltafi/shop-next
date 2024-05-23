@@ -19,9 +19,11 @@ export async function POST(req: NextRequest) {
         }
     })
 
-    if (data === undefined || data === null || data.length === 0 || data[0] == null) {
+    const findlData = data.filter((item: any) => item !== undefined && item !== null)
+
+    if (findlData === undefined || findlData === null || findlData.length === 0) {
         return Response.json({ error: 'موردی یافت نشد' }, { status: 404 })
     }
 
-    return Response.json({ data: data }, { status: 200 })
+    return Response.json({ data: findlData }, { status: 200 })
 }
