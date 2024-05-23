@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
         }
     })
 
-    if (data === undefined || data === null || data.length === 0 || data[0] === null) {
+    if (data === undefined || data === null || data.length === 0 || data[0] == null) {
         return Response.json({ error: 'موردی یافت نشد' }, { status: 404 })
     }
 
