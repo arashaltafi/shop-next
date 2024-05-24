@@ -12,9 +12,9 @@ import Image from 'next/image'
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
-import { convertPrice, convertPriceAll } from '@/utils/Product'
+import { addProductToStorage, convertPrice, convertPriceAll } from '@/utils/Product'
 import { useAppDispatch } from '@/libs/hooks'
-import { deleteAllProduct } from '@/libs/features/productSlice'
+import { addProductCount, deleteAllProduct } from '@/libs/features/productSlice'
 
 const Basket = () => {
     const dispatch = useAppDispatch()
@@ -64,6 +64,70 @@ const Basket = () => {
             } else {
                 showToast('سبد خرید شما خالی است', 'error')
             }
+        }
+    }
+
+    const handleProduct = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        const target = e.target as HTMLDivElement
+        if (target.id === 'undefined' || target.id === '' || target.id === null || target.id == undefined) return
+
+        if (target.id.includes('minus')) {
+            const targetId = parseInt(target.id.replace('minus-', ''))
+            if (isNaN(targetId) || targetId < 1) return
+
+            addProductToStorage(targetId, true)
+            dispatch(addProductCount())
+            setBasketProduct(prev => prev.map(item => {
+                if (item.productId == targetId) {
+                    return {
+                        ...item,
+                        quantity: item.quantity - 1
+                    }
+                }
+                return item
+            }))
+        } else if (target.id.includes('plus')) {
+            const targetId = parseInt(target.id.replace('plus-', ''))
+            if (isNaN(targetId) || targetId < 1) return
+
+            addProductToStorage(targetId)
+            dispatch(addProductCount())
+            setBasketProduct(prev => prev.map(item => {
+                if (item.productId == targetId) {
+                    return {
+                        ...item,
+                        quantity: item.quantity + 1
+                    }
+                }
+                return item
+            }))
+        } else if (target.id.includes('delete')) {
+            const targetId = parseInt(target.id.replace('delete-', ''))
+            if (isNaN(targetId) || targetId < 1) return
+
+            addProductToStorage(targetId, true)
+            dispatch(addProductCount())
+            setBasketProduct(prev => prev.filter(item => {
+                if (item.productId !== targetId) {
+                    return item
+                }
+            }))
+            //for update id (fix divider in ui)
+            setBasketProduct(prev => prev.map((item, index) => {
+                return {
+                    id: index + 1,
+                    productId: item.productId,
+                    name: item.name,
+                    description: item.description,
+                    image: item.image,
+                    price: item.price,
+                    quantity: item.quantity
+                }
+            }))
+
+            showToast('محصول با موفقیت حذف شد', 'success')
+        } else {
+            return
         }
     }
 
@@ -124,16 +188,29 @@ const Basket = () => {
                                                         quality={100}
                                                         loading='lazy'
                                                     />
-                                                    <div className='flex flex-row items-center justify-between gap-x-2 md:gap-x-4 lg:gap-x-6 border border-solid border-brown-200 rounded-md px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 child:cursor-pointer'>
+                                                    <div
+                                                        onClick={(e) => handleProduct(e)}
+                                                        className='flex flex-row items-center justify-between gap-x-2 md:gap-x-4 lg:gap-x-6 border border-solid border-brown-200 rounded-md px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 child:cursor-pointer'>
                                                         {
-                                                            product.quantity > 1 ? <RemoveRoundedIcon fontSize='small' className='hover:bg-brown-700 rounded-full' /> : <DeleteRoundedIcon fontSize='small' className='hover:bg-brown-700 rounded-full' />
+                                                            product.quantity > 1 ?
+                                                                <div className='relative group'>
+                                                                    <RemoveRoundedIcon id={`minus-${product.productId}`} fontSize='small' className='group-hover:bg-brown-700 rounded-full' />
+                                                                    <span id={`minus-${product.productId}`} className='absolute inset-0' />
+                                                                </div> :
+                                                                <div className='relative group'>
+                                                                    <DeleteRoundedIcon fontSize='small' className='group-hover:bg-brown-700 rounded-full' />
+                                                                    <span id={`delete-${product.productId}`} className='absolute inset-0' />
+                                                                </div>
                                                         }
                                                         <h5
                                                             className='text-brown-100 text-sm sm:text-base'
                                                             style={{ cursor: 'default' }}>
                                                             {product.quantity}
                                                         </h5>
-                                                        <AddRoundedIcon className='hover:bg-brown-700 rounded-full' fontSize='small' />
+                                                        <div className='relative group'>
+                                                            <AddRoundedIcon fontSize='small' className='group-hover:bg-brown-700 rounded-full' />
+                                                            <span id={`plus-${product.productId}`} className='absolute inset-0' />
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

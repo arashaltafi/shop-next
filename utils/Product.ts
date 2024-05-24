@@ -8,7 +8,7 @@ const convertPriceAll = (price: number, quantity: number) => {
     return totalPrice.toLocaleString('fa-IR')
 }
 
-const addProductToStorage = (targetId: number) => {
+const addProductToStorage = (targetId: number, isMinus: boolean = false) => {
     const basketStorageKey = process.env.BASKET_STORAGE || ''
     const basketStorage = localStorage.getItem(basketStorageKey)
 
@@ -22,7 +22,8 @@ const addProductToStorage = (targetId: number) => {
         const productIndex = basket.findIndex((item: { productId: number }) => item.productId === targetId)
 
         if (productIndex !== -1) { // Product is already in the basket, update its quantity
-            basket[productIndex].quantity++
+            if (isMinus && basket[productIndex].quantity === 1) basket.splice(productIndex, 1) 
+            else isMinus ? basket[productIndex].quantity-- : basket[productIndex].quantity++
         } else { // Product is not in the basket, add it
             basket.push({
                 productId: targetId,
