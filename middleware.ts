@@ -32,6 +32,10 @@ export function middleware(request: NextRequest) {
     if (request.nextUrl.pathname.startsWith('/category')) {
         return NextResponse.redirect(new URL('/', request.url))
     }
+
+    if (request.nextUrl.pathname.startsWith('/product')) {
+        return NextResponse.redirect(new URL('/', request.url))
+    }
 }
 
 export const config = {
@@ -39,5 +43,6 @@ export const config = {
         '/admin/:path*',
         '/',
         '/category',
+        '/product',
     ]
 }
