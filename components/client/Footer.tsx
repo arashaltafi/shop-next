@@ -22,8 +22,10 @@ import { LinkType } from '@/utils/Enums'
 import { openLink } from '@/utils/GlobalUtils'
 import Link from 'next/link';
 import { showToast } from '@/utils/Toast';
+import { useRouter } from 'next/navigation';
 
 const Footer = () => {
+  const router = useRouter()
   const [email, setEmail] = useState<string>('')
 
   const handleClickLinks = (links: LinkType) => {
@@ -105,6 +107,7 @@ const Footer = () => {
         </div>
         <div className='w-full flex flex-col gap-8 items-center justify-center'>
           <Image
+            onClick={() => router.push('/')}
             className='size-24 sm:size-28 self-end cursor-pointer transition-all duration-150 hover:brightness-125'
             src={logo}
             alt='logo'
