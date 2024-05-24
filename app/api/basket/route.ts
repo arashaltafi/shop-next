@@ -4,11 +4,11 @@ import productList from '../MockData'
 export async function POST(req: NextRequest) {
     const basketList = await req.json()
 
-    const data = basketList.map((basket: any) => {
+    const data = basketList.map((basket: any, index: number) => {
         const product = productList.find((product: any) => product.productId === basket.productId)
         if (product) {
             return {
-                id: product?.id,
+                id: index + 1,
                 productId: basket.productId,
                 quantity: basket.quantity,
                 name: product?.name,
