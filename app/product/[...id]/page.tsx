@@ -5,6 +5,9 @@ import { convertPrice } from '@/utils/Product'
 import Image from 'next/image'
 import { notFound, redirect } from 'next/navigation'
 import React from 'react'
+import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined'
+import { Button } from '@mui/material'
+import ProductComponent from '@/components/client/ProductComponent'
 
 type ProductType = {
     data: {
@@ -29,23 +32,7 @@ const Product = async ({ params }: { params: { id: string[] } }) => {
                     {/* {decodeURIComponent(params.id[1])} */}
                     {response.data.name}
                 </h1>
-                <Image
-                    className='w-1/2 h-auto hover:brightness-125 transition-all duration-150 cursor-pointer'
-                    src={response.data.image}
-                    alt={response.data.name}
-                    width={1000}
-                    height={1000}
-                    quality={100}
-                    priority
-                    loading='eager'
-                />
-
-                <h4>
-                    {response.data.description}
-                </h4>
-                <h4 dir='rtl'>
-                    {convertPrice(response.data.price)} تومان
-                </h4>
+                <ProductComponent data={response.data} />
             </div>
             <BottomBar />
             <Footer />
