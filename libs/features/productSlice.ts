@@ -15,9 +15,12 @@ const productSlice = createSlice({
     reducers: {
         addProductCount: (state) => {
             state.productCount = getProductStorageCount();
+        },
+        deleteAllProduct: (state) => {
+            state.productCount = 0;
         }
     }
 });
 
-export const { addProductCount } = productSlice.actions;
+export const { addProductCount, deleteAllProduct } = productSlice.actions;
 export default productSlice.reducer;

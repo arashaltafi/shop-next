@@ -13,8 +13,12 @@ import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import { convertPrice, convertPriceAll } from '@/utils/Product'
+import { useAppDispatch } from '@/libs/hooks'
+import { deleteAllProduct } from '@/libs/features/productSlice'
 
 const Basket = () => {
+    const dispatch = useAppDispatch()
+
     const [basketProduct, setBasketProduct] = useState<{
         id: number, productId: number, name: string, description: string, image: string, price: number, quantity: number
     }[]>([])
@@ -55,6 +59,7 @@ const Basket = () => {
             if (basketProduct.length > 0) {
                 localStorage.removeItem('basket')
                 setBasketProduct([])
+                dispatch(deleteAllProduct())
                 showToast('سبد خرید شما با موفقیت حذف شد', 'success')
             } else {
                 showToast('سبد خرید شما خالی است', 'error')
