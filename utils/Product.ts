@@ -3,6 +3,11 @@ const convertPrice = (price: number) => {
     // return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+const convertPriceAll = (price: number, quantity: number) => {
+    const totalPrice = quantity * price
+    return totalPrice.toLocaleString('fa-IR')
+}
+
 const addProductToStorage = (targetId: number) => {
     const basketStorageKey = process.env.BASKET_STORAGE || ''
     const basketStorage = localStorage.getItem(basketStorageKey)
@@ -46,6 +51,7 @@ const getProductStorageCount = (): number => {
 
 export {
     convertPrice,
+    convertPriceAll,
     addProductToStorage,
     getProductStorageCount
 }
