@@ -35,7 +35,7 @@ const Basket = () => {
         const basket = localStorage.getItem('basket')
 
         if (basket) {
-            const response = await fetch(`http://localhost:3000/api/basket`, {
+            const response = await fetch(`${process.env.BASE_URL}/basket`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

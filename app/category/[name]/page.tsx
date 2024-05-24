@@ -33,7 +33,7 @@ const CategoryName = async ({ params }: { params: { name: string } }) => {
 export default CategoryName
 
 const fetchData = async (name: string) => {
-    const res = await fetch(`http://localhost:3000/api/category/${name}`, {
+    const res = await fetch(`${process.env.BASE_URL}/category/${name}`, {
         cache: 'no-store'
     })
     if (res.status === 404) {
