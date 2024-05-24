@@ -68,11 +68,21 @@ const convertToEnglish = (value: string): string => {
     return value.replace(/[۰-۹]/g, (matched) => persianToEnglishMap[matched]);
 };
 
+const isEmptyObject = (obj: any) => {
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            return false
+        }
+    }
+    return true
+}
+
 export {
     openLink,
     openMail,
     openPhone,
     getDeviceSize,
     generateRandomNumber,
-    convertToEnglish
+    convertToEnglish,
+    isEmptyObject
 }
