@@ -93,8 +93,9 @@ const BestSellers = () => {
         if (target.id === 'undefined' || target.id === '' || target.id === null) return
 
         if (target.id.includes('product')) {
-            const targetId = parseInt(target.id.replace('product-', '')) || 0
-            console.log('product clicked:', targetId)
+            const arrayId = target.id.split('-')
+            if (arrayId.length < 3) return
+            router.push(`/product/${arrayId[1]}/${arrayId[3]}`)
         } else if (target.id.includes('order')) {
             const targetId = parseInt(target.id.replace('order-', '')) || 0
             addProductToStorage(targetId)
@@ -157,13 +158,13 @@ const BestSellers = () => {
                                         loading='lazy'
                                     />
                                     <span
-                                        id={`product-${product.id}`}
+                                        id={`product-${product.productId}-productName-${product.name}`}
                                         className='absolute top-0 right-0 left-0 bottom-0 bg-gradient-to-bl from-[50%] via-[50%] to-[100%] from-transparent via-transparent to-brown-800 rounded-t-xl rounded-b-sm'
                                     />
                                 </div>
 
                                 <div className='flex flex-col items-center justify-center gap-2 font-light pb-4 sm:pb-8'>
-                                    <h3 id={`product-${product.id}`} dir='rtl' className='font-bold text-sm md:text-base lg:text-lg xl:text-xl text-ellipsis line-clamp-2 max-w-64 text-center'>
+                                    <h3 id={`product-${product.productId}-productName-${product.name}`} dir='rtl' className='font-bold text-sm md:text-base lg:text-lg xl:text-xl text-ellipsis line-clamp-2 max-w-64 text-center'>
                                         {product.name}
                                     </h3>
                                     <div className='flex flex-col items-center justify-center'>
@@ -183,7 +184,7 @@ const BestSellers = () => {
                                     سفارش
                                 </div>
 
-                                <span id={`product-${product.id}`} className='hidden sm:block z-30 absolute inset-0' />
+                                <span id={`product-${product.productId}-productName-${product.name}`} className='hidden sm:block z-30 absolute inset-0' />
                             </div>
                         </Tilt>
                     ))
