@@ -5,6 +5,7 @@ import localFont from 'next/font/local'
 import Script from "next/script";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import ReduxProvider from "@/libs/Provider";
+import CustomProgress from "@/components/both/CustomProgress";
 
 const shabnamFont = localFont({
   src: [
@@ -106,7 +107,9 @@ export default function RootLayout({
       <body className={shabnamFont.className}>
         <ReduxProvider>
           <AppRouterCacheProvider>
-            {children}
+            <CustomProgress>
+              {children}
+            </CustomProgress>
           </AppRouterCacheProvider>
         </ReduxProvider>
       </body>
