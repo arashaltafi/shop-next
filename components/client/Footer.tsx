@@ -64,7 +64,7 @@ const Footer = () => {
         quality={100}
       />
 
-      <div className='w-full flex flex-col-reverse lg:flex-row gap-8 items-center justify-between'>
+      <div className='container w-full flex flex-col-reverse lg:flex-row gap-8 items-center justify-between'>
         <div className='xl:w-full flex flex-col gap-8 items-center justify-center'>
           <Image
             className='size-40 sm:size-48 cursor-pointer transition-all duration-150 hover:brightness-125'
@@ -202,11 +202,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <p dir='rtl' className='w-full text-brown-100 text-sm font-light leading-6 sm:leading-8 list-disc text-ellipsis text-justify'>
+      <p dir='rtl' className='container w-full text-brown-100 text-sm font-light leading-6 sm:leading-8 list-disc text-ellipsis text-justify'>
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
       </p>
 
-      <div className='w-full flex flex-row gap-4 sm:gap-6 md:gap-8 items-center justify-between bg-brown-100 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-14 py-2 sm:py-3 md:py-4 lg:py-6 xl:py-8 rounded-md sm:rounded-lg md:rounded-xl'>
+      <div className='container w-full flex flex-row gap-4 sm:gap-6 md:gap-8 items-center justify-between bg-brown-100 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-14 py-2 sm:py-3 md:py-4 lg:py-6 xl:py-8 rounded-md sm:rounded-lg md:rounded-xl'>
         <div className='w-full flex flex-col-reverse sm:flex-row gap-y-2 gap-x-4 xl:gap-x-0 items-center justify-between bg-yellow-600 rounded-lg px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-3 md:py-4'>
           <button className='btn btnBrown' onClick={handleClickSubmitMail}>
             ارسال
@@ -235,7 +235,7 @@ const Footer = () => {
 
       <span className='w-screen h-px sm:h-0.5 bg-brown-700 rounded-full' />
 
-      <div className='w-full flex flex-col-reverse gap-4 sm:gap-0 sm:flex-row items-center justify-center text-brown-100'>
+      <div className='container w-full flex flex-col-reverse gap-4 sm:gap-0 sm:flex-row items-center justify-center text-brown-100'>
         <div className='flex flex-row items-start justify-center gap-x-4 child:transition-all child:cursor-pointer child-hover:text-brown-400 child-hover:scale-105 child-active:scale-95'>
           <Tooltip
             TransitionComponent={Fade}

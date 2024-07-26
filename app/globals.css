@@ -346,4 +346,8 @@
     color: #EFEBE9;
     text-shadow: 1px 0px 1px #A1887F, 0px 1px 1px #f2e8e5, 0px 1px 1px #A1887F, 1px 0px 1px #f2e8e5, 4px 2px 1px #A1887F, 1px 0px 1px #f2e8e5, 1px 0px 1px #A1887F, 3px 2px 1px #f2e8e5, 0px 0px 1px #A1887F;
   }
+
+  .container {
+    @apply mx-auto max-w-[1560px];
+  }
 }

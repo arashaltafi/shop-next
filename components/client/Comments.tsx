@@ -76,12 +76,12 @@ const Comments = () => {
           zIndex: '-10'
         }}
       />
-      <h2 dir='rtl' className='w-full text-start text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-8 fontMorvarid'>
+      <h2 dir='rtl' className='container w-full text-start text-brown-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-8 fontMorvarid'>
         نظریات مشتریان:
       </h2>
 
       <Swiper
-        className="mt-12 w-full flex flex-row flex-nowrap items-center justify-center gap-16"
+        className="container mt-12 w-full flex flex-row flex-nowrap items-center justify-center gap-16"
         spaceBetween={getDeviceSize() === 'xm' ? 5 : getDeviceSize() === 'sm' ? 10 : getDeviceSize() === 'md' ? 15 : getDeviceSize() === 'lg' ? 20 : getDeviceSize() === 'xl' ? 25 : 30}
         slidesPerView={getDeviceSize() === 'xm' ? 1 : getDeviceSize() === 'sm' ? 1 : getDeviceSize() === 'md' ? 2 : getDeviceSize() === 'lg' ? 2.5 : getDeviceSize() === 'xl' ? 3 : 3}
         loop={true}
@@ -142,7 +142,7 @@ const Comments = () => {
         }
       </Swiper>
 
-      <div className='flex flex-row items-center justify-center gap-5 md:gap-6 lg:gap-7 xl:gap-8 mb-2'>
+      <div className='container flex flex-row items-center justify-center gap-5 md:gap-6 lg:gap-7 xl:gap-8 mb-2'>
         <Image
           className='size-10 md:size-11 lg:size-12 swiper-button-prev1 cursor-pointer transition-all hover:scale-105 active:scale-95'
           src={'/images/arrow-left-circle.svg'}
