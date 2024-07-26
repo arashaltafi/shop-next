@@ -101,10 +101,10 @@ const Questions = () => {
                                     aria-controls={`panel${item.id}bh-content`}
                                     id={`panel${item.id}bh-header`}
                                 >
-                                    <p className='py-2 sm:py-3 lg:py-4 pe-8 text-justify text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl'>{item.title}</p>
+                                    <p className='py-2 sm:py-3 lg:py-4 pe-8 text-justify text-white text-xs sm:text-sm md:text-sm lg:text-bse xl:text-lg'>{item.title}</p>
                                 </AccordionSummary>
                                 <AccordionDetails>
-                                    <p className='py-2 sm:py-3 lg:py-4 pe-8 text-justify text-brown-200 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl'>{item.description}</p>
+                                    <p className='py-2 sm:py-3 lg:py-4 pe-8 text-justify text-brown-200 text-[10px] sm:text-xs md:text-xs lg:text-sm xl:text-base'>{item.description}</p>
                                 </AccordionDetails>
                             </Accordion>
                         ))
