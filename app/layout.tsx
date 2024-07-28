@@ -6,6 +6,7 @@ import Script from "next/script";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import ReduxProvider from "@/libs/Provider";
 import CustomProgress from "@/components/both/CustomProgress";
+import ApolloWrapper from "@/libs/ApolloWrapper";
 
 const shabnamFont = localFont({
   src: [
@@ -107,9 +108,11 @@ export default function RootLayout({
       <body className={shabnamFont.className}>
         <ReduxProvider>
           <AppRouterCacheProvider>
-            <CustomProgress>
-              {children}
-            </CustomProgress>
+            <ApolloWrapper>
+              <CustomProgress>
+                {children}
+              </CustomProgress>
+            </ApolloWrapper>
           </AppRouterCacheProvider>
         </ReduxProvider>
       </body>
