@@ -350,4 +350,15 @@
   .container {
     @apply mx-auto max-w-[1560px];
   }
+
+  select {
+    outline: 0px;
+    appearance: none;
+    /* Remove default arrow */
+    -webkit-appearance: none;
+    /* Remove default arrow for WebKit browsers */
+    -moz-appearance: none;
+    /* Remove default arrow for Firefox */
+    background: url('/images/arrow-down.svg') no-repeat left 10px center;
+  }
 }
