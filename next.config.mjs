@@ -26,9 +26,9 @@ const pwa = withPWAInit({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'standalone',
-    compiler: {
-      removeConsole: true
-    },
+    // compiler: {
+    //   removeConsole: true
+    // },
     env: {
         BASE_URL: "http://localhost:3000/api",
         // BASE_URL: "https://online-shops.ir/api",
@@ -40,4 +40,5 @@ const nextConfig = {
     }
 };
 
-export default pwa(nextConfig);
+export default (nextConfig);
+// export default pwa(nextConfig);
